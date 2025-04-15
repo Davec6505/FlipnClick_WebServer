@@ -94,6 +94,10 @@
          <string>class com.microchip.mcc.harmony.HarmonyModule</string>
       </entry>
       <entry>
+         <string>tcpipIcmp</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+      <entry>
          <string>tcpipNetConfig</string>
          <string>class com.microchip.mcc.harmony.HarmonyModule</string>
       </entry>
@@ -9426,7 +9430,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;GraphSettings canvasHeight=&quot;673&quot; canvasWidth=&quot;841&quot; dnOrder=&quot;0&quot;/&gt;
+    &lt;GraphSettings canvasHeight=&quot;673&quot; canvasWidth=&quot;1000&quot; dnOrder=&quot;0&quot;/&gt;
     &lt;PowerProfiles dnOrder=&quot;1&quot;&gt;
       &lt;Profile dnOrder=&quot;0&quot; id=&quot;profile0&quot; name=&quot;Main&quot;/&gt;
     &lt;/PowerProfiles&gt;
@@ -9451,11 +9455,12 @@
         &lt;ElementPosition dnOrder=&quot;16&quot; id=&quot;tcpipCmd&quot; x=&quot;680&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;17&quot; id=&quot;tcpipHttpNet&quot; x=&quot;459&quot; y=&quot;376&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;18&quot; id=&quot;tcpipIPv4&quot; x=&quot;490&quot; y=&quot;240&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;19&quot; id=&quot;tcpipNetConfig&quot; x=&quot;448&quot; y=&quot;590&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;20&quot; id=&quot;tcpipStack&quot; x=&quot;311&quot; y=&quot;270&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;21&quot; id=&quot;tcpipTcp&quot; x=&quot;690&quot; y=&quot;120&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;22&quot; id=&quot;tcpipTelnet&quot; x=&quot;530&quot; y=&quot;120&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;23&quot; id=&quot;uart5&quot; x=&quot;8&quot; y=&quot;210&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;19&quot; id=&quot;tcpipIcmp&quot; x=&quot;688&quot; y=&quot;290&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;20&quot; id=&quot;tcpipNetConfig&quot; x=&quot;448&quot; y=&quot;590&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;21&quot; id=&quot;tcpipStack&quot; x=&quot;311&quot; y=&quot;270&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;22&quot; id=&quot;tcpipTcp&quot; x=&quot;690&quot; y=&quot;120&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;23&quot; id=&quot;tcpipTelnet&quot; x=&quot;530&quot; y=&quot;120&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;24&quot; id=&quot;uart5&quot; x=&quot;8&quot; y=&quot;210&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
   &lt;/UserData&gt;
@@ -9951,6 +9956,17 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_89_DIR"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_89_DIR&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;Out&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_89_FUNCTION_NAME"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_89_FUNCTION_NAME&quot;&gt;
@@ -9978,6 +9994,17 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_89_MODE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_90_DIR"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_90_DIR&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;Out&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -10017,6 +10044,17 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_91_DIR"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_91_DIR&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;Out&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_91_FUNCTION_NAME"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_91_FUNCTION_NAME&quot;&gt;
@@ -10044,6 +10082,17 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_91_MODE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_94_DIR"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_94_DIR&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;Out&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -12129,6 +12178,17 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="SYS_PORT_A_TRIS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;SYS_PORT_A_TRIS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;192&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="SYS_PORT_D_ANSEL"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;SYS_PORT_D_ANSEL&quot;&gt;
@@ -12145,6 +12205,17 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;SYS_PORT_D_TRIS&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;4096&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="SYS_PORT_E_TRIS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;SYS_PORT_E_TRIS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;3&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -12679,7 +12750,8 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;XC32_HEAP_SIZE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;200000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;1024&quot;/&gt;
+      &lt;User dnOrder=&quot;1&quot; value=&quot;400000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -13144,7 +13216,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="drv_memory_0" name="DRV_MEMORY_BUFFER_QUEUE_SIZE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;drv_memory_0&gt;
   &lt;drv_memory_0 dnOrder=&quot;0&quot; id=&quot;DRV_MEMORY_BUFFER_QUEUE_SIZE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;6&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/drv_memory_0&gt;
 &lt;/drv_memory_0&gt;
 </value>
@@ -13503,7 +13577,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="drv_spi_0" name="DRV_SPI_QUEUE_SIZE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;drv_spi_0&gt;
   &lt;drv_spi_0 dnOrder=&quot;0&quot; id=&quot;DRV_SPI_QUEUE_SIZE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;6&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/drv_spi_0&gt;
 &lt;/drv_spi_0&gt;
 </value>
@@ -14342,7 +14418,14 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="nvm" name="MEMORY_MEDIA_SIZE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;nvm&gt;
   &lt;nvm dnOrder=&quot;0&quot; id=&quot;MEMORY_MEDIA_SIZE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;1024&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/nvm&gt;
 &lt;/nvm&gt;
 </value>
@@ -14411,7 +14494,7 @@
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;9d100000&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;9d0a0000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/nvm&gt;
 &lt;/nvm&gt;
@@ -15091,7 +15174,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_console" name="SYS_CONSOLE_PRINT_BUFFER_SIZE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_console&gt;
   &lt;sys_console dnOrder=&quot;0&quot; id=&quot;SYS_CONSOLE_PRINT_BUFFER_SIZE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;1024&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/sys_console&gt;
 &lt;/sys_console&gt;
 </value>
@@ -15440,6 +15525,19 @@
          <value>__ROOTVIEW</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYM_OPTIONS_LFS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
+  &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYM_OPTIONS_LFS&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/sys_fs&gt;
+&lt;/sys_fs&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_ALIGNED_BUFFER_ENABLE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_ALIGNED_BUFFER_ENABLE&quot;&gt;
@@ -15462,7 +15560,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_AUTO_MOUNT&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sys_fs&gt;
 &lt;/sys_fs&gt;
@@ -15549,7 +15647,14 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_FAT_EXFAT_ENABLE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_FAT_EXFAT_ENABLE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/sys_fs&gt;
 &lt;/sys_fs&gt;
 </value>
@@ -15597,7 +15702,14 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_FAT_LBA64_ENABLE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_FAT_LBA64_ENABLE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sys_fs&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/sys_fs&gt;
 &lt;/sys_fs&gt;
 </value>
@@ -15991,7 +16103,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_IDX0"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_IDX0&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/sys_fs&gt;
 &lt;/sys_fs&gt;
 </value>
@@ -16036,7 +16150,14 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_LFN_ENABLE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_LFN_ENABLE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;readOnly&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sys_fs&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/sys_fs&gt;
 &lt;/sys_fs&gt;
 </value>
@@ -16045,7 +16166,35 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_LFS"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_LFS&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sys_fs&gt;
+&lt;/sys_fs&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_LFS_BDIO_HEADER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
+  &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_LFS_BDIO_HEADER&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/sys_fs&gt;
+&lt;/sys_fs&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_LFS_BDIO_SOURCE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
+  &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_LFS_BDIO_SOURCE&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
   &lt;/sys_fs&gt;
 &lt;/sys_fs&gt;
 </value>
@@ -16055,6 +16204,58 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_LFS_BLOCK_SIZE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sys_fs&gt;
+&lt;/sys_fs&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_LFS_HEADER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
+  &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_LFS_HEADER&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/sys_fs&gt;
+&lt;/sys_fs&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_LFS_INTERFACE_HEADER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
+  &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_LFS_INTERFACE_HEADER&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/sys_fs&gt;
+&lt;/sys_fs&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_LFS_INTERFACE_SOURCE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
+  &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_LFS_INTERFACE_SOURCE&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/sys_fs&gt;
+&lt;/sys_fs&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_LFS_LICENSE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
+  &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_LFS_LICENSE&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
   &lt;/sys_fs&gt;
 &lt;/sys_fs&gt;
 </value>
@@ -16078,10 +16279,64 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_LFS_SOURCE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
+  &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_LFS_SOURCE&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/sys_fs&gt;
+&lt;/sys_fs&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_LFS_UTIL_HEADER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
+  &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_LFS_UTIL_HEADER&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/sys_fs&gt;
+&lt;/sys_fs&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_LFS_UTIL_SOURCE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
+  &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_LFS_UTIL_SOURCE&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/sys_fs&gt;
+&lt;/sys_fs&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_LFS_XC32_INCLUDE_PATH"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
+  &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_LFS_XC32_INCLUDE_PATH&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/sys_fs&gt;
+&lt;/sys_fs&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_MAX_FILES"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_MAX_FILES&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;6&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/sys_fs&gt;
 &lt;/sys_fs&gt;
 </value>
@@ -16251,7 +16506,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_MEDIA_MANAGER_BUFFER_SIZE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_MEDIA_MANAGER_BUFFER_SIZE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;2048&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/sys_fs&gt;
 &lt;/sys_fs&gt;
 </value>
@@ -17341,7 +17598,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="TCPIP_HTTP_NET_DEFAULT_FILE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
   &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;TCPIP_HTTP_NET_DEFAULT_FILE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;index.htm&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/tcpipHttpNet&gt;
 &lt;/tcpipHttpNet&gt;
 </value>
@@ -17440,7 +17699,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="TCPIP_HTTP_NET_FILE_UPLOAD_ENABLE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
   &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;TCPIP_HTTP_NET_FILE_UPLOAD_ENABLE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/tcpipHttpNet&gt;
 &lt;/tcpipHttpNet&gt;
 </value>
@@ -17541,7 +17802,14 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="TCPIP_HTTP_NET_MPFS_NVM_NUM"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
   &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;TCPIP_HTTP_NET_MPFS_NVM_NUM&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;0&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/tcpipHttpNet&gt;
 &lt;/tcpipHttpNet&gt;
 </value>
@@ -17730,7 +17998,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="TCPIP_HTTP_NET_WEBPAGE_DIRECTORY_PATH"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
   &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;TCPIP_HTTP_NET_WEBPAGE_DIRECTORY_PATH&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;C:\Users\Git\FlipnClick_WebServer\src\web_pages&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/tcpipHttpNet&gt;
 &lt;/tcpipHttpNet&gt;
 </value>
@@ -17739,7 +18009,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="TCPIP_HTTP_NET_WEB_DIR"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
   &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;TCPIP_HTTP_NET_WEB_DIR&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;/mnt/mchpSite1/&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/tcpipHttpNet&gt;
 &lt;/tcpipHttpNet&gt;
 </value>
@@ -17749,6 +18021,374 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
   &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;TCPIP_STACK_USE_HTTP_NET_SERVER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipHttpNet&gt;
+&lt;/tcpipHttpNet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="WEBPAGE_LIST_FILE0"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
+  &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;WEBPAGE_LIST_FILE0&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/auth.htm&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/tcpipHttpNet&gt;
+&lt;/tcpipHttpNet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="WEBPAGE_LIST_FILE1"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
+  &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;WEBPAGE_LIST_FILE1&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/cookies.htm&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/tcpipHttpNet&gt;
+&lt;/tcpipHttpNet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="WEBPAGE_LIST_FILE10"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
+  &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;WEBPAGE_LIST_FILE10&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/mchp.gif&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/tcpipHttpNet&gt;
+&lt;/tcpipHttpNet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="WEBPAGE_LIST_FILE11"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
+  &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;WEBPAGE_LIST_FILE11&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/mchp.js&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/tcpipHttpNet&gt;
+&lt;/tcpipHttpNet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="WEBPAGE_LIST_FILE12"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
+  &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;WEBPAGE_LIST_FILE12&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/snmp.bib&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/tcpipHttpNet&gt;
+&lt;/tcpipHttpNet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="WEBPAGE_LIST_FILE13"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
+  &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;WEBPAGE_LIST_FILE13&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/ssi.htm&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/tcpipHttpNet&gt;
+&lt;/tcpipHttpNet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="WEBPAGE_LIST_FILE14"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
+  &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;WEBPAGE_LIST_FILE14&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/status.xml&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/tcpipHttpNet&gt;
+&lt;/tcpipHttpNet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="WEBPAGE_LIST_FILE15"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
+  &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;WEBPAGE_LIST_FILE15&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/upload.htm&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/tcpipHttpNet&gt;
+&lt;/tcpipHttpNet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="WEBPAGE_LIST_FILE16"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
+  &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;WEBPAGE_LIST_FILE16&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/dyndns/index.htm&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/tcpipHttpNet&gt;
+&lt;/tcpipHttpNet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="WEBPAGE_LIST_FILE17"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
+  &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;WEBPAGE_LIST_FILE17&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/email/index.htm&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/tcpipHttpNet&gt;
+&lt;/tcpipHttpNet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="WEBPAGE_LIST_FILE18"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
+  &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;WEBPAGE_LIST_FILE18&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/protect/config.htm&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/tcpipHttpNet&gt;
+&lt;/tcpipHttpNet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="WEBPAGE_LIST_FILE19"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
+  &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;WEBPAGE_LIST_FILE19&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/protect/index.htm&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/tcpipHttpNet&gt;
+&lt;/tcpipHttpNet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="WEBPAGE_LIST_FILE2"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
+  &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;WEBPAGE_LIST_FILE2&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/dynvars.htm&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/tcpipHttpNet&gt;
+&lt;/tcpipHttpNet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="WEBPAGE_LIST_FILE20"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
+  &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;WEBPAGE_LIST_FILE20&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/protect/reboot.cgi&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/tcpipHttpNet&gt;
+&lt;/tcpipHttpNet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="WEBPAGE_LIST_FILE21"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
+  &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;WEBPAGE_LIST_FILE21&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/protect/reboot.htm&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/tcpipHttpNet&gt;
+&lt;/tcpipHttpNet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="WEBPAGE_LIST_FILE22"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
+  &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;WEBPAGE_LIST_FILE22&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/snmp/snmpconfig.htm&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/tcpipHttpNet&gt;
+&lt;/tcpipHttpNet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="WEBPAGE_LIST_FILE3"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
+  &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;WEBPAGE_LIST_FILE3&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/footer.htm&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/tcpipHttpNet&gt;
+&lt;/tcpipHttpNet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="WEBPAGE_LIST_FILE4"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
+  &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;WEBPAGE_LIST_FILE4&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/forms.htm&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/tcpipHttpNet&gt;
+&lt;/tcpipHttpNet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="WEBPAGE_LIST_FILE5"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
+  &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;WEBPAGE_LIST_FILE5&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/harmony.gif&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/tcpipHttpNet&gt;
+&lt;/tcpipHttpNet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="WEBPAGE_LIST_FILE6"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
+  &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;WEBPAGE_LIST_FILE6&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/header.htm&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/tcpipHttpNet&gt;
+&lt;/tcpipHttpNet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="WEBPAGE_LIST_FILE7"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
+  &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;WEBPAGE_LIST_FILE7&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/index.htm&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/tcpipHttpNet&gt;
+&lt;/tcpipHttpNet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="WEBPAGE_LIST_FILE8"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
+  &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;WEBPAGE_LIST_FILE8&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/leds.cgi&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/tcpipHttpNet&gt;
+&lt;/tcpipHttpNet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="WEBPAGE_LIST_FILE9"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
+  &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;WEBPAGE_LIST_FILE9&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/mchp.css&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
   &lt;/tcpipHttpNet&gt;
 &lt;/tcpipHttpNet&gt;
 </value>
@@ -17777,7 +18417,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipIPv4" name="TCPIP_IPV4_COMMANDS_ENABLE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipIPv4&gt;
   &lt;tcpipIPv4 dnOrder=&quot;0&quot; id=&quot;TCPIP_IPV4_COMMANDS_ENABLE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/tcpipIPv4&gt;
 &lt;/tcpipIPv4&gt;
 </value>
@@ -18554,6 +19196,143 @@
     &lt;Values dnOrder=&quot;0&quot;/&gt;
   &lt;/tcpipIPv4&gt;
 &lt;/tcpipIPv4&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipIcmp" name="!@#harmonyAttachmentState"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipIcmp&gt;
+  &lt;tcpipIcmp dnOrder=&quot;0&quot;/&gt;
+&lt;/tcpipIcmp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipIcmp" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>__ROOTVIEW</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipIcmp" name="TCPIP_ICMP_COMMAND_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipIcmp&gt;
+  &lt;tcpipIcmp dnOrder=&quot;0&quot; id=&quot;TCPIP_ICMP_COMMAND_ENABLE&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/tcpipIcmp&gt;
+&lt;/tcpipIcmp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipIcmp" name="TCPIP_ICMP_ECHO_BROADCASTS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipIcmp&gt;
+  &lt;tcpipIcmp dnOrder=&quot;0&quot; id=&quot;TCPIP_ICMP_ECHO_BROADCASTS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipIcmp&gt;
+&lt;/tcpipIcmp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipIcmp" name="TCPIP_ICMP_ECHO_REQUEST_TIMEOUT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipIcmp&gt;
+  &lt;tcpipIcmp dnOrder=&quot;0&quot; id=&quot;TCPIP_ICMP_ECHO_REQUEST_TIMEOUT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipIcmp&gt;
+&lt;/tcpipIcmp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipIcmp" name="TCPIP_ICMP_TASK_TICK_RATE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipIcmp&gt;
+  &lt;tcpipIcmp dnOrder=&quot;0&quot; id=&quot;TCPIP_ICMP_TASK_TICK_RATE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipIcmp&gt;
+&lt;/tcpipIcmp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipIcmp" name="TCPIP_STACK_COMMANDS_ICMP_ECHO_REQUESTS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipIcmp&gt;
+  &lt;tcpipIcmp dnOrder=&quot;0&quot; id=&quot;TCPIP_STACK_COMMANDS_ICMP_ECHO_REQUESTS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipIcmp&gt;
+&lt;/tcpipIcmp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipIcmp" name="TCPIP_STACK_COMMANDS_ICMP_ECHO_REQUEST_BUFF_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipIcmp&gt;
+  &lt;tcpipIcmp dnOrder=&quot;0&quot; id=&quot;TCPIP_STACK_COMMANDS_ICMP_ECHO_REQUEST_BUFF_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipIcmp&gt;
+&lt;/tcpipIcmp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipIcmp" name="TCPIP_STACK_COMMANDS_ICMP_ECHO_REQUEST_DATA_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipIcmp&gt;
+  &lt;tcpipIcmp dnOrder=&quot;0&quot; id=&quot;TCPIP_STACK_COMMANDS_ICMP_ECHO_REQUEST_DATA_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipIcmp&gt;
+&lt;/tcpipIcmp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipIcmp" name="TCPIP_STACK_COMMANDS_ICMP_ECHO_REQUEST_DELAY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipIcmp&gt;
+  &lt;tcpipIcmp dnOrder=&quot;0&quot; id=&quot;TCPIP_STACK_COMMANDS_ICMP_ECHO_REQUEST_DELAY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipIcmp&gt;
+&lt;/tcpipIcmp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipIcmp" name="TCPIP_STACK_COMMANDS_ICMP_ECHO_TIMEOUT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipIcmp&gt;
+  &lt;tcpipIcmp dnOrder=&quot;0&quot; id=&quot;TCPIP_STACK_COMMANDS_ICMP_ECHO_TIMEOUT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipIcmp&gt;
+&lt;/tcpipIcmp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipIcmp" name="TCPIP_STACK_MAX_CLIENT_ECHO_REQUESTS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipIcmp&gt;
+  &lt;tcpipIcmp dnOrder=&quot;0&quot; id=&quot;TCPIP_STACK_MAX_CLIENT_ECHO_REQUESTS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipIcmp&gt;
+&lt;/tcpipIcmp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipIcmp" name="TCPIP_STACK_USE_ICMPV4"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipIcmp&gt;
+  &lt;tcpipIcmp dnOrder=&quot;0&quot; id=&quot;TCPIP_STACK_USE_ICMPV4&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipIcmp&gt;
+&lt;/tcpipIcmp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipIcmp" name="TCPIP_STACK_USE_ICMP_CLIENT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipIcmp&gt;
+  &lt;tcpipIcmp dnOrder=&quot;0&quot; id=&quot;TCPIP_STACK_USE_ICMP_CLIENT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/tcpipIcmp&gt;
+&lt;/tcpipIcmp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipIcmp" name="TCPIP_STACK_USE_ICMP_SERVER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipIcmp&gt;
+  &lt;tcpipIcmp dnOrder=&quot;0&quot; id=&quot;TCPIP_STACK_USE_ICMP_SERVER&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipIcmp&gt;
+&lt;/tcpipIcmp&gt;
 </value>
       </entry>
       <entry>
@@ -19705,7 +20484,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipStack" name="TCPIP_STACK_DRAM_SIZE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipStack&gt;
   &lt;tcpipStack dnOrder=&quot;0&quot; id=&quot;TCPIP_STACK_DRAM_SIZE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;40000&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/tcpipStack&gt;
 &lt;/tcpipStack&gt;
 </value>
@@ -20533,7 +21314,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipTelnet" name="TCPIP_TELNET_AUTH_CONFIG"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipTelnet&gt;
   &lt;tcpipTelnet dnOrder=&quot;0&quot; id=&quot;TCPIP_TELNET_AUTH_CONFIG&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;(OBSOLETE) Build Time Authentication&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/tcpipTelnet&gt;
 &lt;/tcpipTelnet&gt;
 </value>
@@ -20551,7 +21334,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipTelnet" name="TCPIP_TELNET_CONFIG_PASS_CONTROL_CHARS"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipTelnet&gt;
   &lt;tcpipTelnet dnOrder=&quot;0&quot; id=&quot;TCPIP_TELNET_CONFIG_PASS_CONTROL_CHARS&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/tcpipTelnet&gt;
 &lt;/tcpipTelnet&gt;
 </value>
@@ -20605,7 +21390,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipTelnet" name="TCPIP_TELNET_PRINT_BUFF_SIZE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipTelnet&gt;
   &lt;tcpipTelnet dnOrder=&quot;0&quot; id=&quot;TCPIP_TELNET_PRINT_BUFF_SIZE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;1024&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/tcpipTelnet&gt;
 &lt;/tcpipTelnet&gt;
 </value>
@@ -21103,11 +21890,11 @@
       </entry>
       <entry>
          <file>..\src\config\default\configuration.h</file>
-         <hash>b1c712be70ee583937f454609b27c47fa56c41c1eb90071b92adbb9878fcb252</hash>
+         <hash>764df2d8893f584383370b775697e2077f2b89532bd1ae6aa272f1eb41c2d069</hash>
       </entry>
       <entry>
          <file>..\src\config\default\definitions.h</file>
-         <hash>1f037921a775753213030cbdab2909c3a771a771dfa28aa3317afad33ad5e7df</hash>
+         <hash>0caadb367ffc8e840349c5e8e784c654b84f2bef8606f5048f995ce3f2d2eae7</hash>
       </entry>
       <entry>
          <file>..\src\config\default\device.h</file>
@@ -21327,7 +22114,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\initialization.c</file>
-         <hash>2be9f690b8defee7c28a228e9be754c8df22f47b46d7c74927f0cdabbd0f0703</hash>
+         <hash>7c2bb6e82794a7d9267e1697edf94bc4871c26713f921da963ad03e38a647d23</hash>
       </entry>
       <entry>
          <file>..\src\config\default\interrupts.c</file>
@@ -21582,6 +22369,10 @@
          <hash>8e6c8e33a14324cbd403e7c52718605bd27bf9f8b91667ab11acd045963a2dbc</hash>
       </entry>
       <entry>
+         <file>..\src\config\default\library\tcpip\src\icmp.c</file>
+         <hash>38438bd4e94e1ff4f0a5f3b14eea2e9e9e4f6452b06e1f3717db6f703bd2df37</hash>
+      </entry>
+      <entry>
          <file>..\src\config\default\library\tcpip\src\icmp_manager.h</file>
          <hash>70c316280838197122c69fa9515cf596047ae269eb68d49226fed94b8bc71107</hash>
       </entry>
@@ -21771,7 +22562,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\library\tcpip\src\tcpip_private.h</file>
-         <hash>fd382ba4ed540e7a43077b68fe265e29fee1430dc032408f4fc65a5e30f43f1b</hash>
+         <hash>0c347997e8ca7c78de270bf52b3e28e3cd8760521225c4813e12681275e1408e</hash>
       </entry>
       <entry>
          <file>..\src\config\default\library\tcpip\src\tcpip_reboot_manager.h</file>
@@ -21831,7 +22622,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\library\tcpip\tcpip.h</file>
-         <hash>61b69b5fa7e6e7a77cdab49003efc54c369016d9df04009268dd9b8ebd4f22de</hash>
+         <hash>fb01ba6dde84ed0896da0ec035669f81e150b25d05d7345e00691dbae5bbe1f0</hash>
       </entry>
       <entry>
          <file>..\src\config\default\library\tcpip\tcpip_announce.h</file>
@@ -22015,7 +22806,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\gpio\plib_gpio.c</file>
-         <hash>203eb6678a758ad0a687ebc380e6d3fcb7bb41299081633f9b0f5a527e5adca7</hash>
+         <hash>d2733213d32e61683f9f115598cf183f4a6172b6e3d6f91504f5d5657de4ce6b</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\gpio\plib_gpio.h</file>
@@ -22027,7 +22818,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\nvm\plib_nvm.h</file>
-         <hash>d959b0b0f27d5580d2ab0e35b53fb3cc376424d73ed20a8602e688c9e4ea8aac</hash>
+         <hash>826a4e6d6266d7bcc38d7921e59b9b152ee48fac6f6399824ad3d193244f0b46</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\spi\spi_master\plib_spi1_master.c</file>
@@ -22139,7 +22930,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\system\fs\src\sys_fs.c</file>
-         <hash>71469a319d65bba7d0ffa3377c597940582b28b6d83592bf2ec304fc47b1c428</hash>
+         <hash>0099b48fcfccb8ed9301e2451f1053297a10768dca2a4e2064a22cf6ac6124a3</hash>
       </entry>
       <entry>
          <file>..\src\config\default\system\fs\src\sys_fs_local.h</file>
@@ -22147,7 +22938,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\system\fs\src\sys_fs_media_manager.c</file>
-         <hash>5b095b36dca400364af687205c85c57ebc6791eda2cd58a8e614c792e0c200f3</hash>
+         <hash>a0745d9c0719f56614a94ce4e69ad3ad89b15ee160e79c52c7d79d68f8311676</hash>
       </entry>
       <entry>
          <file>..\src\config\default\system\fs\src\sys_fs_media_manager_local.h</file>

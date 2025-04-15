@@ -113,9 +113,8 @@ extern "C" {
 #define SYS_FS_MEDIA_NUMBER               (1U)
 #define SYS_FS_VOLUME_NUMBER              (1U)
 
-#define SYS_FS_AUTOMOUNT_ENABLE           true
-#define SYS_FS_CLIENT_NUMBER              1U
-#define SYS_FS_MAX_FILES                  (1U)
+#define SYS_FS_AUTOMOUNT_ENABLE           false
+#define SYS_FS_MAX_FILES                  (6U)
 #define SYS_FS_MAX_FILE_SYSTEM_TYPE       (1U)
 #define SYS_FS_MEDIA_MAX_BLOCK_SIZE       (512U)
 #define SYS_FS_MEDIA_MANAGER_BUFFER_SIZE  (2048U)
@@ -129,17 +128,11 @@ extern "C" {
 
 
 
-#define SYS_FS_MEDIA_TYPE_IDX0 				SYS_FS_MEDIA_TYPE_NVM
-#define SYS_FS_TYPE_IDX0 					MPFS2
-					
-#define SYS_FS_MEDIA_IDX0_MOUNT_NAME_VOLUME_IDX0 			"/mnt/myDrive1"
-#define SYS_FS_MEDIA_IDX0_DEVICE_NAME_VOLUME_IDX0			"/dev/nvma1"
-								
 
 #define SYS_CONSOLE_DEVICE_MAX_INSTANCES   			(1U)
 #define SYS_CONSOLE_UART_MAX_INSTANCES 	   			(1U)
 #define SYS_CONSOLE_USB_CDC_MAX_INSTANCES 	   		(0U)
-#define SYS_CONSOLE_PRINT_BUFFER_SIZE        		(200U)
+#define SYS_CONSOLE_PRINT_BUFFER_SIZE        		(1024U)
 
 
 
@@ -155,8 +148,8 @@ extern "C" {
 /* Memory Driver Instance 0 Configuration */
 #define DRV_MEMORY_INDEX_0                   0
 #define DRV_MEMORY_CLIENTS_NUMBER_IDX0       1
-#define DRV_MEMORY_BUF_Q_SIZE_IDX0    1
-#define DRV_MEMORY_DEVICE_START_ADDRESS      0x9d100000U
+#define DRV_MEMORY_BUF_Q_SIZE_IDX0    6
+#define DRV_MEMORY_DEVICE_START_ADDRESS      0x9d0a0000U
 #define DRV_MEMORY_DEVICE_MEDIA_SIZE         1024UL
 #define DRV_MEMORY_DEVICE_MEDIA_SIZE_BYTES   (DRV_MEMORY_DEVICE_MEDIA_SIZE * 1024U)
 #define DRV_MEMORY_DEVICE_PROGRAM_SIZE       2048U
@@ -186,7 +179,7 @@ extern "C" {
 #define DRV_SPI_DMA_MODE
 #define DRV_SPI_XMIT_DMA_CH_IDX0              SYS_DMA_CHANNEL_0
 #define DRV_SPI_RCV_DMA_CH_IDX0               SYS_DMA_CHANNEL_1
-#define DRV_SPI_QUEUE_SIZE_IDX0               4
+#define DRV_SPI_QUEUE_SIZE_IDX0               6
 
 
 
@@ -195,6 +188,23 @@ extern "C" {
 // Section: Middleware & Other Library Configuration
 // *****************************************************************************
 // *****************************************************************************
+
+/*** ICMPv4 Server Configuration ***/
+#define TCPIP_STACK_USE_ICMP_SERVER
+#define TCPIP_ICMP_ECHO_ALLOW_BROADCASTS    false
+
+/*** ICMPv4 Client Configuration ***/
+#define TCPIP_STACK_USE_ICMP_CLIENT
+#define TCPIP_ICMP_ECHO_REQUEST_TIMEOUT        500
+#define TCPIP_ICMP_TASK_TICK_RATE              33
+#define TCPIP_STACK_MAX_CLIENT_ECHO_REQUESTS   4
+#define TCPIP_ICMP_COMMAND_ENABLE              true
+#define TCPIP_STACK_COMMANDS_ICMP_ECHO_REQUESTS         4
+#define TCPIP_STACK_COMMANDS_ICMP_ECHO_REQUEST_DELAY    1000
+#define TCPIP_STACK_COMMANDS_ICMP_ECHO_TIMEOUT          5000
+#define TCPIP_STACK_COMMANDS_ICMP_ECHO_REQUEST_BUFF_SIZE    2000
+#define TCPIP_STACK_COMMANDS_ICMP_ECHO_REQUEST_DATA_SIZE    100
+
 
 /*** HTTP NET Configuration ***/
 #define TCPIP_STACK_USE_HTTP_NET_SERVER
@@ -205,6 +215,11 @@ extern "C" {
 #define TCPIP_HTTP_NET_DEFAULT_FILE		        		"index.htm"
 #define TCPIP_HTTP_NET_FILENAME_MAX_LEN			        25
 #define TCPIP_HTTP_NET_WEB_DIR		        		    "/mnt/mchpSite1/"
+#define TCPIP_HTTP_NET_FILE_UPLOAD_ENABLE
+#define TCPIP_HTTP_NET_FILE_UPLOAD_NAME				    "mpfsupload"
+#define MPFS_UPLOAD_MOUNT_PATH							"/mnt/mchpSite1"
+#define MPFS_UPLOAD_NVM_VOL								"/dev/nvma1"
+#define MPFS_UPLOAD_DISK_NO								0
 #define TCPIP_HTTP_NET_USE_POST
 #define TCPIP_HTTP_NET_USE_COOKIES
 #define TCPIP_HTTP_NET_USE_AUTHENTICATION
@@ -321,14 +336,16 @@ extern "C" {
 #define TCPIP_TELNET_SKT_TX_BUFF_SIZE   0
 #define TCPIP_TELNET_SKT_RX_BUFF_SIZE   0
 #define TCPIP_TELNET_LISTEN_PORT        23
-#define TCPIP_TELNET_PRINT_BUFF_SIZE    200
+#define TCPIP_TELNET_PRINT_BUFF_SIZE    1024
 #define TCPIP_TELNET_LINE_BUFF_SIZE     80
 #define TCPIP_TELNET_USERNAME_SIZE      15
 #define TCPIP_TELNET_CONFIG_FLAGS       \
+                                       TCPIP_TELNET_FLAG_PASS_CONTROL_CHARS |\
                                        TCPIP_TELNET_FLAG_NONE
 
-#define TCPIP_TELNET_OBSOLETE_AUTHENTICATION false
-#define TCPIP_TELNET_AUTHENTICATION_CONN_INFO true
+#define TCPIP_TELNET_OBSOLETE_AUTHENTICATION true
+#define TCPIP_TELNET_USERNAME           "admin"
+#define TCPIP_TELNET_PASSWORD           "microchip"
 
 
 
@@ -336,7 +353,7 @@ extern "C" {
 #define TCPIP_IPV4_ARP_SLOTS                        10
 #define TCPIP_IPV4_EXTERN_PACKET_PROCESS   false
 
-#define TCPIP_IPV4_COMMANDS false
+#define TCPIP_IPV4_COMMANDS true
 
 #define TCPIP_IPV4_FORWARDING_ENABLE    false 
 
@@ -346,7 +363,7 @@ extern "C" {
 
 /*** TCPIP Heap Configuration ***/
 #define TCPIP_STACK_USE_INTERNAL_HEAP
-#define TCPIP_STACK_DRAM_SIZE                       39250
+#define TCPIP_STACK_DRAM_SIZE                       40000
 #define TCPIP_STACK_DRAM_RUN_LIMIT                  2048
 
 #define TCPIP_STACK_MALLOC_FUNC                     malloc

@@ -740,6 +740,7 @@ typedef struct TCPIP_STACK_INIT
 #include "tcpip/arp.h"
 #include "tcpip/tcp.h"
 #include "tcpip/udp.h"
+#include "tcpip/icmp.h"
 #include "tcpip/telnet.h"
 #include "tcpip/http_net.h"
 #include "tcpip/lldp.h"

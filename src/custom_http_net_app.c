@@ -509,7 +509,7 @@ static TCPIP_HTTP_NET_IO_RESULT HTTPPostLCD(TCPIP_HTTP_NET_CONN_HANDLE connHandl
 #if defined(HTTP_APP_USE_MD5)
 static TCPIP_HTTP_NET_IO_RESULT HTTPPostMD5(TCPIP_HTTP_NET_CONN_HANDLE connHandle)
 {
- //   static CRYPT_MD5_CTX md5;
+//    static CRYPT_MD5_CTX md5;
     uint8_t *httpDataBuff;
     uint32_t lenA, lenB;
 
@@ -523,7 +523,7 @@ static TCPIP_HTTP_NET_IO_RESULT HTTPPostMD5(TCPIP_HTTP_NET_CONN_HANDLE connHandl
         // Just started, so try to find the separator string
         case SM_MD5_READ_SEPARATOR:
             // Reset the MD5 calculation
-      //      CRYPT_MD5_Initialize(&md5);
+//            CRYPT_MD5_Initialize(&md5);
 
             // See if a CRLF is in the buffer
             lenA = TCPIP_HTTP_NET_ConnectionStringFind(connHandle, "\r\n", 0, 0);
@@ -588,7 +588,7 @@ static TCPIP_HTTP_NET_IO_RESULT HTTPPostMD5(TCPIP_HTTP_NET_CONN_HANDLE connHandl
             if(TCPIP_HTTP_NET_ConnectionByteCountGet(connHandle) == 0u)
             {// Calculate and copy result data buffer for printout
                 TCPIP_HTTP_NET_ConnectionPostSmSet(connHandle, SM_MD5_POST_COMPLETE);
-    //            CRYPT_MD5_Finalize(&md5, httpDataBuff);
+//                CRYPT_MD5_Finalize(&md5, httpDataBuff);
                 return TCPIP_HTTP_NET_IO_RES_DONE;
             }
 

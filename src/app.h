@@ -80,7 +80,6 @@
 #define APP_LED_1StateClear()       LED1_Clear()
 #define APP_LED_1StateToggle()      LED1_Toggle()
 
-#if defined(__PIC32MZ__)
 #define APP_LED_2StateSet()         LED2_Set()
 #define APP_LED_2StateGet()         LED2_Get()
 #define APP_LED_2StateClear()       LED2_Clear()
@@ -90,7 +89,7 @@
 #define APP_LED_3StateGet()         LED3_Get()
 #define APP_LED_3StateClear()       LED3_Clear()
 #define APP_LED_3StateToggle()      LED3_Toggle()
-#endif
+
 
 // Application SYS_FS mount points
 // Adjust as needed

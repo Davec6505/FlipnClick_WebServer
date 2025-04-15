@@ -345,6 +345,11 @@ const TCPIP_HTTP_NET_MODULE_CONFIG tcpipHTTPNetInitData =
 
 
 
+/*** ICMP Server Initialization Data ***/
+const TCPIP_ICMP_MODULE_CONFIG tcpipICMPInitData = 
+{
+    0
+};
 
 
 
@@ -408,6 +413,7 @@ const TCPIP_STACK_MODULE_CONFIG TCPIP_STACK_MODULE_CONFIG_TBL [] =
 {
     {TCPIP_MODULE_IPV4,             &tcpipIPv4InitData},
 
+    {TCPIP_MODULE_ICMP,             0},                             // TCPIP_MODULE_ICMP
 
     {TCPIP_MODULE_ARP,              &tcpipARPInitData},             // TCPIP_MODULE_ARP
     {TCPIP_MODULE_TCP,              &tcpipTCPInitData},             // TCPIP_MODULE_TCP
@@ -535,16 +541,11 @@ static const NET_PRES_INIT_DATA netPresInitData =
 
 // <editor-fold defaultstate="collapsed" desc="File System Initialization Data">
 
- const SYS_FS_MEDIA_MOUNT_DATA sysfsMountTable[SYS_FS_VOLUME_NUMBER] =
-{
-    {
-        .mountName = SYS_FS_MEDIA_IDX0_MOUNT_NAME_VOLUME_IDX0,
-        .devName   = SYS_FS_MEDIA_IDX0_DEVICE_NAME_VOLUME_IDX0,
-        .mediaType = SYS_FS_MEDIA_TYPE_IDX0,
-        .fsType   = SYS_FS_TYPE_IDX0
-    },
-};
 
+const SYS_FS_MEDIA_MOUNT_DATA sysfsMountTable[SYS_FS_VOLUME_NUMBER] =
+{
+    {NULL}
+};
 
 
 static const SYS_FS_FUNCTIONS MPFSFunctions =

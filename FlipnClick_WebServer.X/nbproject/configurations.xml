@@ -414,6 +414,7 @@
                 <itemPath>../src/config/default/library/tcpip/src/tcpip_commands.c</itemPath>
                 <itemPath>../src/config/default/library/tcpip/src/hash_fnv.c</itemPath>
                 <itemPath>../src/config/default/library/tcpip/src/telnet.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/icmp.c</itemPath>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
@@ -700,7 +701,7 @@
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-cross-reference-file" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
-        <property key="heap-size" value="200000"/>
+        <property key="heap-size" value="400000"/>
         <property key="input-libraries" value=""/>
         <property key="kseg-length" value=""/>
         <property key="kseg-origin" value=""/>

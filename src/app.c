@@ -144,6 +144,7 @@ void APP_Tasks ( void )
                 SYS_CONSOLE_PRINT("SYS_Initialize: The %s File System is mounted\r\n", APP_SYS_FS_TYPE_STRING);
                 appData.state = APP_TCPIP_WAIT_INIT;
             }
+
             CORETIMER_DelayMs(100);
             break;
 
