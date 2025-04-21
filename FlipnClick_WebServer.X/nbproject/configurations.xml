@@ -58,6 +58,13 @@
               <itemPath>../src/config/default/driver/memory/drv_memory.h</itemPath>
               <itemPath>../src/config/default/driver/memory/drv_memory_nvm.h</itemPath>
             </logicalFolder>
+            <logicalFolder name="sdspi" displayName="sdspi" projectFiles="true">
+              <itemPath>../src/config/default/driver/sdspi/src/drv_sdspi_file_system.h</itemPath>
+              <itemPath>../src/config/default/driver/sdspi/src/drv_sdspi_plib_interface.h</itemPath>
+              <itemPath>../src/config/default/driver/sdspi/drv_sdspi.h</itemPath>
+              <itemPath>../src/config/default/driver/sdspi/drv_sdspi_definitions.h</itemPath>
+              <itemPath>../src/config/default/driver/sdspi/src/drv_sdspi_local.h</itemPath>
+            </logicalFolder>
             <logicalFolder name="spi" displayName="spi" projectFiles="true">
               <itemPath>../src/config/default/driver/spi/drv_spi_definitions.h</itemPath>
               <itemPath>../src/config/default/driver/spi/drv_spi.h</itemPath>
@@ -243,6 +250,7 @@
               <logicalFolder name="spi_master" displayName="spi_master" projectFiles="true">
                 <itemPath>../src/config/default/peripheral/spi/spi_master/plib_spi_master_common.h</itemPath>
                 <itemPath>../src/config/default/peripheral/spi/spi_master/plib_spi1_master.h</itemPath>
+                <itemPath>../src/config/default/peripheral/spi/spi_master/plib_spi2_master.h</itemPath>
               </logicalFolder>
             </logicalFolder>
             <logicalFolder name="uart" displayName="uart" projectFiles="true">
@@ -272,6 +280,17 @@
               <itemPath>../src/config/default/system/dma/sys_dma_mapping.h</itemPath>
             </logicalFolder>
             <logicalFolder name="fs" displayName="fs" projectFiles="true">
+              <logicalFolder name="fat_fs" displayName="fat_fs" projectFiles="true">
+                <logicalFolder name="file_system" displayName="file_system" projectFiles="true">
+                  <itemPath>../src/config/default/system/fs/fat_fs/file_system/ffconf.h</itemPath>
+                  <itemPath>../src/config/default/system/fs/fat_fs/file_system/ff.h</itemPath>
+                </logicalFolder>
+                <logicalFolder name="hardware_access"
+                               displayName="hardware_access"
+                               projectFiles="true">
+                  <itemPath>../src/config/default/system/fs/fat_fs/hardware_access/diskio.h</itemPath>
+                </logicalFolder>
+              </logicalFolder>
               <logicalFolder name="mpfs" displayName="mpfs" projectFiles="true">
                 <itemPath>../src/config/default/system/fs/mpfs/mpfs_local.h</itemPath>
                 <itemPath>../src/config/default/system/fs/mpfs/mpfs.h</itemPath>
@@ -280,6 +299,7 @@
               <itemPath>../src/config/default/system/fs/sys_fs_media_manager.h</itemPath>
               <itemPath>../src/config/default/system/fs/src/sys_fs_local.h</itemPath>
               <itemPath>../src/config/default/system/fs/src/sys_fs_media_manager_local.h</itemPath>
+              <itemPath>../src/config/default/system/fs/sys_fs_fat_interface.h</itemPath>
             </logicalFolder>
             <logicalFolder name="int" displayName="int" projectFiles="true">
               <itemPath>../src/config/default/system/int/sys_int.h</itemPath>
@@ -386,6 +406,11 @@
               <itemPath>../src/config/default/driver/memory/src/drv_memory_file_system.c</itemPath>
               <itemPath>../src/config/default/driver/memory/src/drv_memory_nvm.c</itemPath>
             </logicalFolder>
+            <logicalFolder name="sdspi" displayName="sdspi" projectFiles="true">
+              <itemPath>../src/config/default/driver/sdspi/src/drv_sdspi_file_system.c</itemPath>
+              <itemPath>../src/config/default/driver/sdspi/src/drv_sdspi_plib_interface.c</itemPath>
+              <itemPath>../src/config/default/driver/sdspi/src/drv_sdspi.c</itemPath>
+            </logicalFolder>
             <logicalFolder name="spi" displayName="spi" projectFiles="true">
               <itemPath>../src/config/default/driver/spi/src/drv_spi.c</itemPath>
             </logicalFolder>
@@ -453,6 +478,7 @@
             <logicalFolder name="spi" displayName="spi" projectFiles="true">
               <logicalFolder name="spi_master" displayName="spi_master" projectFiles="true">
                 <itemPath>../src/config/default/peripheral/spi/spi_master/plib_spi1_master.c</itemPath>
+                <itemPath>../src/config/default/peripheral/spi/spi_master/plib_spi2_master.c</itemPath>
               </logicalFolder>
             </logicalFolder>
             <logicalFolder name="uart" displayName="uart" projectFiles="true">
@@ -480,11 +506,23 @@
               <itemPath>../src/config/default/system/dma/sys_dma.c</itemPath>
             </logicalFolder>
             <logicalFolder name="fs" displayName="fs" projectFiles="true">
+              <logicalFolder name="fat_fs" displayName="fat_fs" projectFiles="true">
+                <logicalFolder name="file_system" displayName="file_system" projectFiles="true">
+                  <itemPath>../src/config/default/system/fs/fat_fs/file_system/ffunicode.c</itemPath>
+                  <itemPath>../src/config/default/system/fs/fat_fs/file_system/ff.c</itemPath>
+                </logicalFolder>
+                <logicalFolder name="hardware_access"
+                               displayName="hardware_access"
+                               projectFiles="true">
+                  <itemPath>../src/config/default/system/fs/fat_fs/hardware_access/diskio.c</itemPath>
+                </logicalFolder>
+              </logicalFolder>
               <logicalFolder name="mpfs" displayName="mpfs" projectFiles="true">
                 <itemPath>../src/config/default/system/fs/mpfs/mpfs.c</itemPath>
               </logicalFolder>
               <itemPath>../src/config/default/system/fs/src/sys_fs.c</itemPath>
               <itemPath>../src/config/default/system/fs/src/sys_fs_media_manager.c</itemPath>
+              <itemPath>../src/config/default/system/fs/src/sys_fs_fat_interface.c</itemPath>
             </logicalFolder>
             <logicalFolder name="int" displayName="int" projectFiles="true">
               <itemPath>../src/config/default/system/int/src/sys_int.c</itemPath>
@@ -546,6 +584,8 @@
         <itemPath>../src/web_pages/leds.cgi</itemPath>
         <itemPath>../src/web_pages/footer.htm</itemPath>
         <itemPath>../src/web_pages/cookies.htm</itemPath>
+        <itemPath>../src/web_pages/DynRcrd.bin</itemPath>
+        <itemPath>../src/web_pages/FileRcrd.bin</itemPath>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>

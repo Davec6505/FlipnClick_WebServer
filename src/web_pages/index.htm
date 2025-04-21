@@ -78,7 +78,7 @@ function updateStatus(xmlData) {
 	loadstat = 'none';
 
 	// Loop over all the LEDs
-	for(i = 0; i < 3; i++) // Temporarily change 3 to 1
+	for(i = 0; i < 3; i++) 
 		document.getElementById('led' + i).style.color = (getXMLValue(xmlData, 'led' + i) == '1') ? '#090' : '#ddd';
 
 	// Loop over all the buttons
