@@ -111,9 +111,10 @@ extern "C" {
 /* File System Service Configuration */
 
 #define SYS_FS_MEDIA_NUMBER               (2U)
-#define SYS_FS_VOLUME_NUMBER              (1U)
+#define SYS_FS_VOLUME_NUMBER              (2U)
 
-#define SYS_FS_AUTOMOUNT_ENABLE           false
+#define SYS_FS_AUTOMOUNT_ENABLE           true
+#define SYS_FS_CLIENT_NUMBER              2U
 #define SYS_FS_MAX_FILES                  (6U)
 #define SYS_FS_MAX_FILE_SYSTEM_TYPE       (2U)
 #define SYS_FS_MEDIA_MAX_BLOCK_SIZE       (512U)
@@ -133,6 +134,18 @@ extern "C" {
 
 
 
+#define SYS_FS_MEDIA_TYPE_IDX0 				SYS_FS_MEDIA_TYPE_NVM
+#define SYS_FS_TYPE_IDX0 					MPFS2
+
+#define SYS_FS_MEDIA_IDX0_MOUNT_NAME_VOLUME_IDX0 			"/mnt/myDrive1"
+#define SYS_FS_MEDIA_IDX0_DEVICE_NAME_VOLUME_IDX0			"/dev/nvma1"
+								
+#define SYS_FS_MEDIA_TYPE_IDX1 				SYS_FS_MEDIA_TYPE_MSD
+#define SYS_FS_TYPE_IDX1 					FAT
+					
+#define SYS_FS_MEDIA_IDX1_MOUNT_NAME_VOLUME_IDX0 			"/mnt/myDrive1"
+#define SYS_FS_MEDIA_IDX1_DEVICE_NAME_VOLUME_IDX0			"/dev/sda1"
+								
 
 #define SYS_CONSOLE_DEVICE_MAX_INSTANCES   			(1U)
 #define SYS_CONSOLE_UART_MAX_INSTANCES 	   			(1U)
@@ -152,7 +165,7 @@ extern "C" {
 #define DRV_SDSPI_CLIENTS_NUMBER_IDX0           1
 #define DRV_SDSPI_QUEUE_SIZE_IDX0               4
 #define DRV_SDSPI_CHIP_SELECT_PIN_IDX0          SYS_PORT_PIN_RE4
-#define DRV_SDSPI_SPEED_HZ_IDX0                 5000000
+#define DRV_SDSPI_SPEED_HZ_IDX0                 10000000
 #define DRV_SDSPI_POLLING_INTERVAL_MS_IDX0      1000
 
 #define DRV_SDSPI_DMA_MODE
@@ -241,7 +254,7 @@ extern "C" {
 #define TCPIP_HTTP_NET_FILE_UPLOAD_NAME				    "mpfsupload"
 #define MPFS_UPLOAD_MOUNT_PATH							"/mnt/mchpSite1"
 #define MPFS_UPLOAD_NVM_VOL								"/dev/nvma1"
-#define MPFS_UPLOAD_DISK_NO								0
+#define MPFS_UPLOAD_DISK_NO								1
 #define TCPIP_HTTP_NET_USE_POST
 #define TCPIP_HTTP_NET_USE_COOKIES
 #define TCPIP_HTTP_NET_USE_AUTHENTICATION

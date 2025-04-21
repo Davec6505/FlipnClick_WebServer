@@ -9442,7 +9442,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;GraphSettings canvasHeight=&quot;899&quot; canvasWidth=&quot;1000&quot; dnOrder=&quot;0&quot;/&gt;
+    &lt;GraphSettings canvasHeight=&quot;898&quot; canvasWidth=&quot;1000&quot; dnOrder=&quot;0&quot;/&gt;
     &lt;PowerProfiles dnOrder=&quot;1&quot;&gt;
       &lt;Profile dnOrder=&quot;0&quot; id=&quot;profile0&quot; name=&quot;Main&quot;/&gt;
     &lt;/PowerProfiles&gt;
@@ -9458,12 +9458,12 @@
         &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;drv_spi&quot; x=&quot;133&quot; y=&quot;725&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;net_Pres&quot; x=&quot;840&quot; y=&quot;11&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;9&quot; id=&quot;nvm&quot; x=&quot;10&quot; y=&quot;432&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;10&quot; id=&quot;spi1&quot; x=&quot;0&quot; y=&quot;787&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;11&quot; id=&quot;spi2&quot; x=&quot;18&quot; y=&quot;630&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;10&quot; id=&quot;spi1&quot; x=&quot;0&quot; y=&quot;786&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;11&quot; id=&quot;spi2&quot; x=&quot;18&quot; y=&quot;632&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;12&quot; id=&quot;sys_command&quot; x=&quot;327&quot; y=&quot;33&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;13&quot; id=&quot;sys_console&quot; x=&quot;148&quot; y=&quot;146&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;14&quot; id=&quot;sys_debug&quot; x=&quot;327&quot; y=&quot;146&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;15&quot; id=&quot;sys_fs&quot; x=&quot;305&quot; y=&quot;491&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;15&quot; id=&quot;sys_fs&quot; x=&quot;305&quot; y=&quot;492&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;16&quot; id=&quot;sys_time&quot; x=&quot;147&quot; y=&quot;36&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;17&quot; id=&quot;tcpipArp&quot; x=&quot;690&quot; y=&quot;220&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;18&quot; id=&quot;tcpipCmd&quot; x=&quot;680&quot; y=&quot;20&quot;/&gt;
@@ -14646,7 +14646,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="drv_sdspi_0" name="DRV_SDSPI_SPEED_HZ"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;drv_sdspi_0&gt;
   &lt;drv_sdspi_0 dnOrder=&quot;0&quot; id=&quot;DRV_SDSPI_SPEED_HZ&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;10000000&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/drv_sdspi_0&gt;
 &lt;/drv_sdspi_0&gt;
 </value>
@@ -16340,7 +16342,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;spi2&gt;
   &lt;spi2 dnOrder=&quot;0&quot; id=&quot;SPI_BAUD_RATE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;20000000&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;10000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/spi2&gt;
 &lt;/spi2&gt;
@@ -16351,7 +16353,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;spi2&gt;
   &lt;spi2 dnOrder=&quot;0&quot; id=&quot;SPI_BRG_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;spi2&quot; value=&quot;2&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;spi2&quot; value=&quot;4&quot;/&gt;
     &lt;/Values&gt;
   &lt;/spi2&gt;
 &lt;/spi2&gt;
@@ -17285,7 +17287,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_AUTO_MOUNT&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;false&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sys_fs&gt;
 &lt;/sys_fs&gt;
@@ -17295,7 +17297,14 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_CLIENT_NUMBER"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_CLIENT_NUMBER&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;2&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/sys_fs&gt;
 &lt;/sys_fs&gt;
 </value>
@@ -18084,7 +18093,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_MAX_FILE_SYSTEM_TYPE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_MAX_FILE_SYSTEM_TYPE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;2&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/sys_fs&gt;
 &lt;/sys_fs&gt;
 </value>
@@ -18104,7 +18115,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_MEDIA_DEVICE_1_NAME_IDX1"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_MEDIA_DEVICE_1_NAME_IDX1&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sys_fs&quot; value=&quot;/dev/sda1&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/sys_fs&gt;
 &lt;/sys_fs&gt;
 </value>
@@ -18142,7 +18155,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_MEDIA_DEVICE_2_NAME_IDX1"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_MEDIA_DEVICE_2_NAME_IDX1&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sys_fs&quot; value=&quot;/dev/sda2&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/sys_fs&gt;
 &lt;/sys_fs&gt;
 </value>
@@ -18180,7 +18195,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_MEDIA_DEVICE_3_NAME_IDX1"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_MEDIA_DEVICE_3_NAME_IDX1&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sys_fs&quot; value=&quot;/dev/sda3&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/sys_fs&gt;
 &lt;/sys_fs&gt;
 </value>
@@ -18218,7 +18235,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_MEDIA_DEVICE_4_NAME_IDX1"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_MEDIA_DEVICE_4_NAME_IDX1&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sys_fs&quot; value=&quot;/dev/sda4&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/sys_fs&gt;
 &lt;/sys_fs&gt;
 </value>
@@ -18420,7 +18439,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_MEDIA_TYPE_DEFINE_IDX1"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_MEDIA_TYPE_DEFINE_IDX1&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;SYS_FS_MEDIA_TYPE_MSD&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/sys_fs&gt;
 &lt;/sys_fs&gt;
 </value>
@@ -18606,7 +18627,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_TOTAL_VOLUMES&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sys_fs&quot; value=&quot;1&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sys_fs&quot; value=&quot;2&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sys_fs&gt;
 &lt;/sys_fs&gt;
@@ -19317,7 +19338,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="TCPIP_HTTP_NET_CUSTOM_TEMPLATE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
   &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;TCPIP_HTTP_NET_CUSTOM_TEMPLATE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/tcpipHttpNet&gt;
 &lt;/tcpipHttpNet&gt;
 </value>
@@ -19549,7 +19572,7 @@
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;0&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;1&quot;/&gt;
     &lt;/Values&gt;
   &lt;/tcpipHttpNet&gt;
 &lt;/tcpipHttpNet&gt;
@@ -19739,8 +19762,13 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="TCPIP_HTTP_NET_WEBPAGE_DIRECTORY_PATH"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
   &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;TCPIP_HTTP_NET_WEBPAGE_DIRECTORY_PATH&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;C:\Users\Git\FlipnClick_WebServer\src\web_pages&quot;/&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;C:\Users\cfan\OneDrive\Desktop\MPFS2_Test\web_pages&quot;/&gt;
     &lt;/Values&gt;
   &lt;/tcpipHttpNet&gt;
 &lt;/tcpipHttpNet&gt;
@@ -19775,7 +19803,7 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
       &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/auth.htm&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/cfan/OneDrive/Desktop/MPFS2_Test/web_pages/auth.htm&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/tcpipHttpNet&gt;
@@ -19791,7 +19819,7 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
       &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/cookies.htm&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/cfan/OneDrive/Desktop/MPFS2_Test/web_pages/cookies.htm&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/tcpipHttpNet&gt;
@@ -19806,8 +19834,11 @@
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
-      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/mchp.gif&lt;/Value&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;index.htm&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;2&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/cfan/OneDrive/Desktop/MPFS2_Test/web_pages/index.htm&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/tcpipHttpNet&gt;
@@ -19822,8 +19853,11 @@
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
-      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/mchp.js&lt;/Value&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;leds.cgi&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;2&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/cfan/OneDrive/Desktop/MPFS2_Test/web_pages/leds.cgi&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/tcpipHttpNet&gt;
@@ -19838,8 +19872,11 @@
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
-      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/snmp.bib&lt;/Value&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;mchp.css&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;2&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/cfan/OneDrive/Desktop/MPFS2_Test/web_pages/mchp.css&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/tcpipHttpNet&gt;
@@ -19854,8 +19891,11 @@
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
-      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/ssi.htm&lt;/Value&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;mchp.gif&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;2&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/cfan/OneDrive/Desktop/MPFS2_Test/web_pages/mchp.gif&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/tcpipHttpNet&gt;
@@ -19870,8 +19910,11 @@
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
-      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/status.xml&lt;/Value&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;mchp.js&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;2&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/cfan/OneDrive/Desktop/MPFS2_Test/web_pages/mchp.js&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/tcpipHttpNet&gt;
@@ -19886,8 +19929,11 @@
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
-      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/upload.htm&lt;/Value&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;MES_Small.gif&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;2&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/cfan/OneDrive/Desktop/MPFS2_Test/web_pages/MES_Small.gif&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/tcpipHttpNet&gt;
@@ -19902,8 +19948,14 @@
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
-      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/dyndns/index.htm&lt;/Value&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;modbus.htm&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;2&quot; id=&quot;project&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;web_pages\&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;3&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/cfan/OneDrive/Desktop/MPFS2_Test/web_pages/modbus.htm&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/tcpipHttpNet&gt;
@@ -19918,8 +19970,14 @@
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
-      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/email/index.htm&lt;/Value&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;snmp.bib&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;2&quot; id=&quot;project&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;web_pages\&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;3&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/cfan/OneDrive/Desktop/MPFS2_Test/web_pages/snmp.bib&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/tcpipHttpNet&gt;
@@ -19934,8 +19992,14 @@
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
-      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/protect/config.htm&lt;/Value&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;ssi.htm&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;2&quot; id=&quot;project&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;web_pages\&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;3&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/cfan/OneDrive/Desktop/MPFS2_Test/web_pages/ssi.htm&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/tcpipHttpNet&gt;
@@ -19950,8 +20014,14 @@
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
-      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/protect/index.htm&lt;/Value&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;status.xml&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;2&quot; id=&quot;project&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;web_pages\&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;3&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/cfan/OneDrive/Desktop/MPFS2_Test/web_pages/status.xml&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/tcpipHttpNet&gt;
@@ -19966,8 +20036,11 @@
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
-      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/dynvars.htm&lt;/Value&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;DynRcrd.bin&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;2&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/cfan/OneDrive/Desktop/MPFS2_Test/web_pages/DynRcrd.bin&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/tcpipHttpNet&gt;
@@ -19982,8 +20055,14 @@
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
-      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/protect/reboot.cgi&lt;/Value&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;upload.htm&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;2&quot; id=&quot;project&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;web_pages\&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;3&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/cfan/OneDrive/Desktop/MPFS2_Test/web_pages/upload.htm&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/tcpipHttpNet&gt;
@@ -19998,8 +20077,14 @@
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
-      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/protect/reboot.htm&lt;/Value&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;dyndns\index.htm&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;2&quot; id=&quot;project&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;web_pages\dyndns\&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;3&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/cfan/OneDrive/Desktop/MPFS2_Test/web_pages/dyndns/index.htm&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/tcpipHttpNet&gt;
@@ -20014,8 +20099,154 @@
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
-      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/snmp/snmpconfig.htm&lt;/Value&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;email\index.htm&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;2&quot; id=&quot;project&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;web_pages\email\&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;3&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/cfan/OneDrive/Desktop/MPFS2_Test/web_pages/email/index.htm&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/tcpipHttpNet&gt;
+&lt;/tcpipHttpNet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="WEBPAGE_LIST_FILE23"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
+  &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;WEBPAGE_LIST_FILE23&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;String dnOrder=&quot;0&quot; id=&quot;dest&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;../../web_pages&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;Boolean dnOrder=&quot;1&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;2&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;protect\config.htm&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;3&quot; id=&quot;project&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;web_pages\protect\&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;Boolean dnOrder=&quot;4&quot; id=&quot;relative&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;5&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/cfan/OneDrive/Desktop/MPFS2_Test/web_pages/protect/config.htm&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/tcpipHttpNet&gt;
+&lt;/tcpipHttpNet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="WEBPAGE_LIST_FILE24"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
+  &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;WEBPAGE_LIST_FILE24&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;String dnOrder=&quot;0&quot; id=&quot;dest&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;../../web_pages&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;Boolean dnOrder=&quot;1&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;2&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;protect\index.htm&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;3&quot; id=&quot;project&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;web_pages\protect\&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;Boolean dnOrder=&quot;4&quot; id=&quot;relative&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;5&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/cfan/OneDrive/Desktop/MPFS2_Test/web_pages/protect/index.htm&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/tcpipHttpNet&gt;
+&lt;/tcpipHttpNet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="WEBPAGE_LIST_FILE25"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
+  &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;WEBPAGE_LIST_FILE25&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;String dnOrder=&quot;0&quot; id=&quot;dest&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;../../web_pages&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;Boolean dnOrder=&quot;1&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;2&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;protect\reboot.cgi&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;3&quot; id=&quot;project&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;web_pages\protect\&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;Boolean dnOrder=&quot;4&quot; id=&quot;relative&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;5&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/cfan/OneDrive/Desktop/MPFS2_Test/web_pages/protect/reboot.cgi&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/tcpipHttpNet&gt;
+&lt;/tcpipHttpNet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="WEBPAGE_LIST_FILE26"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
+  &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;WEBPAGE_LIST_FILE26&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;String dnOrder=&quot;0&quot; id=&quot;dest&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;../../web_pages&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;Boolean dnOrder=&quot;1&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;2&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;protect\reboot.htm&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;3&quot; id=&quot;project&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;web_pages\protect\&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;Boolean dnOrder=&quot;4&quot; id=&quot;relative&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;5&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/cfan/OneDrive/Desktop/MPFS2_Test/web_pages/protect/reboot.htm&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/tcpipHttpNet&gt;
+&lt;/tcpipHttpNet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="WEBPAGE_LIST_FILE27"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipHttpNet&gt;
+  &lt;tcpipHttpNet dnOrder=&quot;0&quot; id=&quot;WEBPAGE_LIST_FILE27&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;String dnOrder=&quot;0&quot; id=&quot;dest&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;../../web_pages&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;Boolean dnOrder=&quot;1&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;2&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;snmp\snmpconfig.htm&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;3&quot; id=&quot;project&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;web_pages\snmp\&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;Boolean dnOrder=&quot;4&quot; id=&quot;relative&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;5&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/cfan/OneDrive/Desktop/MPFS2_Test/web_pages/snmp/snmpconfig.htm&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/tcpipHttpNet&gt;
@@ -20030,8 +20261,11 @@
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
-      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/footer.htm&lt;/Value&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;dynvars.htm&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;2&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/cfan/OneDrive/Desktop/MPFS2_Test/web_pages/dynvars.htm&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/tcpipHttpNet&gt;
@@ -20046,8 +20280,11 @@
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
-      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/forms.htm&lt;/Value&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;FileRcrd.bin&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;2&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/cfan/OneDrive/Desktop/MPFS2_Test/web_pages/FileRcrd.bin&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/tcpipHttpNet&gt;
@@ -20062,8 +20299,11 @@
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
-      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/harmony.gif&lt;/Value&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;footer.htm&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;2&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/cfan/OneDrive/Desktop/MPFS2_Test/web_pages/footer.htm&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/tcpipHttpNet&gt;
@@ -20078,8 +20318,11 @@
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
-      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/header.htm&lt;/Value&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;forms.htm&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;2&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/cfan/OneDrive/Desktop/MPFS2_Test/web_pages/forms.htm&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/tcpipHttpNet&gt;
@@ -20094,8 +20337,11 @@
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
-      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/index.htm&lt;/Value&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;harmony.gif&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;2&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/cfan/OneDrive/Desktop/MPFS2_Test/web_pages/harmony.gif&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/tcpipHttpNet&gt;
@@ -20110,8 +20356,11 @@
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
-      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/leds.cgi&lt;/Value&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;header.htm&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;2&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/cfan/OneDrive/Desktop/MPFS2_Test/web_pages/header.htm&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/tcpipHttpNet&gt;
@@ -20126,8 +20375,11 @@
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
-      &lt;String dnOrder=&quot;1&quot; id=&quot;source&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/Git/FlipnClick_WebServer/src/web_pages/mchp.css&lt;/Value&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;IMG_3297.gif&lt;/Value&gt;
+      &lt;/String&gt;
+      &lt;String dnOrder=&quot;2&quot; id=&quot;source&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;C:/Users/cfan/OneDrive/Desktop/MPFS2_Test/web_pages/IMG_3297.gif&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/tcpipHttpNet&gt;
@@ -23645,11 +23897,11 @@
       </entry>
       <entry>
          <file>..\src\config\default\configuration.h</file>
-         <hash>995aac86eeb45b936cae649708bd762838c015ff715cf258df49a2b3779372dc</hash>
+         <hash>83421ad6a9d1005ef9a4d85bf76b41c5758221ae4f4e118bbbbae216e7193177</hash>
       </entry>
       <entry>
          <file>..\src\config\default\definitions.h</file>
-         <hash>91d9f0379e1216ad47837e1b7f49d4f73815509f583a915dfc7a17f9cd508690</hash>
+         <hash>2285300e568c0f7759ef0b6a8059ddf327bb64b24c460be1e439c500767f6592</hash>
       </entry>
       <entry>
          <file>..\src\config\default\device.h</file>
@@ -23901,7 +24153,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\initialization.c</file>
-         <hash>b7dfc0d0edfcb4158a6375261bb9e385547065a3ec0d94a204c247b9f39ca6a8</hash>
+         <hash>be0b7e2ffdc5c9f548d8526950139d26bc3ed06f0cf0493ce0df74154f4c797e</hash>
       </entry>
       <entry>
          <file>..\src\config\default\interrupts.c</file>
@@ -24617,7 +24869,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\spi\spi_master\plib_spi2_master.c</file>
-         <hash>ed9fd4266892ef995eed36dc4b1a8c736059126b6be2a20bea7e005b11536c0a</hash>
+         <hash>dc4b56d4d4e046c71d2a2bfd1bfb32ac2c7997e57cfd8a4786c6f0cb2a25cf5a</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\spi\spi_master\plib_spi2_master.h</file>
@@ -24721,7 +24973,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\system\fs\fat_fs\file_system\ffconf.h</file>
-         <hash>ac2b7aa2b4365da7423cf4223d67c1522903772be75e3b14c204779c2aa7050a</hash>
+         <hash>d25791aa7e002a5dd3af32735c0125c69e421deb6967a2b43337c98f53d973b1</hash>
       </entry>
       <entry>
          <file>..\src\config\default\system\fs\fat_fs\file_system\ffunicode.c</file>
@@ -24749,7 +25001,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\system\fs\src\sys_fs.c</file>
-         <hash>ecc5ea0bc26927dea239f8485e871def38b0170415921b6e2cd784aa8ef5932b</hash>
+         <hash>8737766cae9b08cadb220137c403b3dd2a09944cca8f7439d82af09995e9b69a</hash>
       </entry>
       <entry>
          <file>..\src\config\default\system\fs\src\sys_fs_fat_interface.c</file>
@@ -24761,7 +25013,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\system\fs\src\sys_fs_media_manager.c</file>
-         <hash>038ab2760a858b4d13d9c508e9a8af7234dbf948992aaab16026d6855bf3d74e</hash>
+         <hash>86cb478eb6b02475d028712760ee222e5d88d6d8521f55f9f6e97494cca0dcf0</hash>
       </entry>
       <entry>
          <file>..\src\config\default\system\fs\src\sys_fs_media_manager_local.h</file>
@@ -24893,11 +25145,19 @@
       </entry>
       <entry>
          <file>..\src\web_pages\DynRcrd.bin</file>
-         <hash>e1a4b3e4cca219875f4f0961fd73cae642f03b22630d4acb7458efb27b37dc5f</hash>
+         <hash>fc1fb56253540e858a278c3e42781007a277de8c9988fbed9684cf4f0db8bd0d</hash>
       </entry>
       <entry>
          <file>..\src\web_pages\FileRcrd.bin</file>
-         <hash>511e37c798748132f141358484b6d8f1158bd36d49d055fa51c7aea97497a582</hash>
+         <hash>ffc8e9db3d56462c5ebdcd1e79f51bfd9cbab9fd00fd4bd8c8602dea1faa73ff</hash>
+      </entry>
+      <entry>
+         <file>..\src\web_pages\IMG_3297.gif</file>
+         <hash>f29c1dbb452c0052020ffa7de51bab210730755d9f53378303f9457c21560df0</hash>
+      </entry>
+      <entry>
+         <file>..\src\web_pages\MES_Small.gif</file>
+         <hash>dd2eabcfa627b532787e995b0a19fffa59eb5e321e35c46694be03d6cf73c6c7</hash>
       </entry>
       <entry>
          <file>..\src\web_pages\auth.htm</file>
@@ -24913,7 +25173,7 @@
       </entry>
       <entry>
          <file>..\src\web_pages\dynvars.htm</file>
-         <hash>6626331dabca89c98a78385c9bc3e6cb1d99ffa721df0bd182ea0a7992ed98e8</hash>
+         <hash>a61a089281d1fe06fbaa7fbd021beb83503405dde9bab310723fc8fb452b5d8f</hash>
       </entry>
       <entry>
          <file>..\src\web_pages\email\index.htm</file>
@@ -24933,19 +25193,19 @@
       </entry>
       <entry>
          <file>..\src\web_pages\header.htm</file>
-         <hash>682a7c917dbabe94e078f16f8148692217292309b6cbc1345ad83cdf178416c3</hash>
+         <hash>9d17c365e1a9afce13a8390a79ee884b34152d94fc71a4a72bfeaba8b80cbd4d</hash>
       </entry>
       <entry>
          <file>..\src\web_pages\index.htm</file>
-         <hash>658324c67989f099f3ea8f9d5e460d3036d94d472863589aca883418d2425056</hash>
+         <hash>c135ec85811ceaa83b17826745f4c7e23d18c330d4dbef6a57b10c724d8f7432</hash>
       </entry>
       <entry>
          <file>..\src\web_pages\leds.cgi</file>
-         <hash>c145d94511a017969b9b05aff3dfd59fcb35578a4ca8e2e8056be096a0e4307c</hash>
+         <hash>1f4674bd3449cf350f755f677dbb2489c074d0c543b871a077058fa2d743083d</hash>
       </entry>
       <entry>
          <file>..\src\web_pages\mchp.css</file>
-         <hash>f0ec8631cc4eac975f0aef8a2189b78eeefeaab7f3e592202ca78ecbdd266fb6</hash>
+         <hash>a4540232bd4c801cc1d529e089096797fa5217946b4da1317bfac8b137aa166b</hash>
       </entry>
       <entry>
          <file>..\src\web_pages\mchp.gif</file>
@@ -24954,6 +25214,10 @@
       <entry>
          <file>..\src\web_pages\mchp.js</file>
          <hash>cdfd5bfd7b77eca7d461867016deab50607c3f94e1efd4a0d58f6f3874e4c9a1</hash>
+      </entry>
+      <entry>
+         <file>..\src\web_pages\modbus.htm</file>
+         <hash>9db729d0a3ad438909d544d020072f59404a42a56e20ffdde5777323905a3f5f</hash>
       </entry>
       <entry>
          <file>..\src\web_pages\protect\config.htm</file>

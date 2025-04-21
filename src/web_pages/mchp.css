@@ -227,3 +227,11 @@ fieldset textarea {
 		border-color: #cc6;
 		background: #ffd;
 	}
+
+.sub-list {
+	font-size: 5pt;
+}
+
+.status-reg {
+	font-size: 8pt;
+}

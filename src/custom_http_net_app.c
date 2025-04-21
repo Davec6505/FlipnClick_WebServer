@@ -36,7 +36,6 @@ Microchip or any third party.
 #include "http_net_print.h"
 #if defined(TCPIP_STACK_USE_HTTP_NET_SERVER)
 
-//#include "crypto/crypto.h"
 #include "net_pres/pres/net_pres_socketapi.h"
 #include "system/sys_random_h2_adapter.h"
 #include "system/sys_time_h2_adapter.h"
@@ -102,10 +101,6 @@ Microchip or any third party.
 // Use the web page in the Demo App (~2.5kb ROM, ~0b RAM)
 #define HTTP_APP_USE_RECONFIG
 
-#if !defined( NO_MD5 )        // no MD5 if crypto_config.h says NO_MD5   
-// Use the MD5 Demo web page (~5kb ROM, ~160b RAM)
-#define HTTP_APP_USE_MD5
-#endif
 
 // Use the e-mail demo web page
 #if defined(TCPIP_STACK_USE_SMTPC)
@@ -509,7 +504,7 @@ static TCPIP_HTTP_NET_IO_RESULT HTTPPostLCD(TCPIP_HTTP_NET_CONN_HANDLE connHandl
 #if defined(HTTP_APP_USE_MD5)
 static TCPIP_HTTP_NET_IO_RESULT HTTPPostMD5(TCPIP_HTTP_NET_CONN_HANDLE connHandle)
 {
-//    static CRYPT_MD5_CTX md5;
+    static CRYPT_MD5_CTX md5;
     uint8_t *httpDataBuff;
     uint32_t lenA, lenB;
 
@@ -523,7 +518,7 @@ static TCPIP_HTTP_NET_IO_RESULT HTTPPostMD5(TCPIP_HTTP_NET_CONN_HANDLE connHandl
         // Just started, so try to find the separator string
         case SM_MD5_READ_SEPARATOR:
             // Reset the MD5 calculation
-//            CRYPT_MD5_Initialize(&md5);
+            CRYPT_MD5_Initialize(&md5);
 
             // See if a CRLF is in the buffer
             lenA = TCPIP_HTTP_NET_ConnectionStringFind(connHandle, "\r\n", 0, 0);
@@ -581,14 +576,14 @@ static TCPIP_HTTP_NET_IO_RESULT HTTPPostMD5(TCPIP_HTTP_NET_CONN_HANDLE connHandl
                 lenB = TCPIP_HTTP_NET_ConnectionRead(connHandle, httpDataBuff, (lenA < 64u)?lenA:64);
                 TCPIP_HTTP_NET_ConnectionByteCountDec(connHandle, lenB);
                 lenA -= lenB;
-//                CRYPT_MD5_DataAdd(&md5,httpDataBuff, lenB);
+                CRYPT_MD5_DataAdd(&md5,httpDataBuff, lenB);
             }
 
             // If we've read all the data
             if(TCPIP_HTTP_NET_ConnectionByteCountGet(connHandle) == 0u)
             {// Calculate and copy result data buffer for printout
                 TCPIP_HTTP_NET_ConnectionPostSmSet(connHandle, SM_MD5_POST_COMPLETE);
-//                CRYPT_MD5_Finalize(&md5, httpDataBuff);
+                CRYPT_MD5_Finalize(&md5, httpDataBuff);
                 return TCPIP_HTTP_NET_IO_RES_DONE;
             }
 
@@ -1083,7 +1078,7 @@ static TCPIP_HTTP_NET_IO_RESULT HTTPPostEmail(TCPIP_HTTP_NET_CONN_HANDLE connHan
             mySMTPMessage.username = postEmail.username;
             mySMTPMessage.password = postEmail.password;
             mySMTPMessage.to = postEmail.mailTo;
-            mySMTPMessage.from = "\"SMTP Service\" <mchpboard@picsaregood.com>";
+            mySMTPMessage.from = "mchpboard@picsaregood.com";
             mySMTPMessage.subject = "Microchip TCP/IP Stack Status Update";
 
             // set the buffer attachment
@@ -1371,8 +1366,7 @@ TCPIP_HTTP_DYN_PRINT_RES TCPIP_HTTP_Print_builddate(TCPIP_HTTP_NET_CONN_HANDLE c
 
 TCPIP_HTTP_DYN_PRINT_RES TCPIP_HTTP_Print_version(TCPIP_HTTP_NET_CONN_HANDLE connHandle, const TCPIP_HTTP_DYN_VAR_DCPT *vDcpt)
 {
-    //TCPIP_HTTP_NET_DynamicWriteString(vDcpt, (const char *)TCPIP_STACK_VERSION_STR, false);
-    TCPIP_HTTP_NET_DynamicWriteString(vDcpt, (const char *)LIGHT_VERSION_STR, false);
+    TCPIP_HTTP_NET_DynamicWriteString(vDcpt, (const char *)TCPIP_STACK_VERSION_STR, false);
     return TCPIP_HTTP_DYN_PRINT_RES_DONE;
 }
 

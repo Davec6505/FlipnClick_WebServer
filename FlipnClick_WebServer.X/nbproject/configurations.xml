@@ -336,8 +336,8 @@
           <itemPath>../src/config/default/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
-      <itemPath>../src/http_net_print.h</itemPath>
       <itemPath>../src/app.h</itemPath>
+      <itemPath>../src/http_net_print.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -557,9 +557,9 @@
         </logicalFolder>
         <logicalFolder name="protect" displayName="protect" projectFiles="true">
           <logicalFolder name="protect" displayName="protect" projectFiles="true">
+            <itemPath>../src/web_pages/protect/reboot.htm</itemPath>
             <itemPath>../src/web_pages/protect/reboot.cgi</itemPath>
             <itemPath>../src/web_pages/protect/index.htm</itemPath>
-            <itemPath>../src/web_pages/protect/reboot.htm</itemPath>
             <itemPath>../src/web_pages/protect/config.htm</itemPath>
           </logicalFolder>
         </logicalFolder>
@@ -568,14 +568,18 @@
             <itemPath>../src/web_pages/snmp/snmpconfig.htm</itemPath>
           </logicalFolder>
         </logicalFolder>
+        <itemPath>../src/web_pages/modbus.htm</itemPath>
         <itemPath>../src/web_pages/header.htm</itemPath>
         <itemPath>../src/web_pages/upload.htm</itemPath>
         <itemPath>../src/web_pages/forms.htm</itemPath>
         <itemPath>../src/web_pages/index.htm</itemPath>
         <itemPath>../src/web_pages/mchp.css</itemPath>
         <itemPath>../src/web_pages/auth.htm</itemPath>
+        <itemPath>../src/web_pages/MES_Small.gif</itemPath>
+        <itemPath>../src/web_pages/DynRcrd.bin</itemPath>
         <itemPath>../src/web_pages/snmp.bib</itemPath>
         <itemPath>../src/web_pages/ssi.htm</itemPath>
+        <itemPath>../src/web_pages/IMG_3297.gif</itemPath>
         <itemPath>../src/web_pages/mchp.js</itemPath>
         <itemPath>../src/web_pages/dynvars.htm</itemPath>
         <itemPath>../src/web_pages/status.xml</itemPath>
@@ -584,14 +588,13 @@
         <itemPath>../src/web_pages/leds.cgi</itemPath>
         <itemPath>../src/web_pages/footer.htm</itemPath>
         <itemPath>../src/web_pages/cookies.htm</itemPath>
-        <itemPath>../src/web_pages/DynRcrd.bin</itemPath>
         <itemPath>../src/web_pages/FileRcrd.bin</itemPath>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
+      <itemPath>../src/mpfs_net_img.c</itemPath>
       <itemPath>../src/custom_http_net_app.c</itemPath>
       <itemPath>../src/http_net_print.c</itemPath>
-      <itemPath>../src/mpfs_net_img.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
