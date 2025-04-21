@@ -1371,7 +1371,8 @@ TCPIP_HTTP_DYN_PRINT_RES TCPIP_HTTP_Print_builddate(TCPIP_HTTP_NET_CONN_HANDLE c
 
 TCPIP_HTTP_DYN_PRINT_RES TCPIP_HTTP_Print_version(TCPIP_HTTP_NET_CONN_HANDLE connHandle, const TCPIP_HTTP_DYN_VAR_DCPT *vDcpt)
 {
-    TCPIP_HTTP_NET_DynamicWriteString(vDcpt, (const char *)TCPIP_STACK_VERSION_STR, false);
+    //TCPIP_HTTP_NET_DynamicWriteString(vDcpt, (const char *)TCPIP_STACK_VERSION_STR, false);
+    TCPIP_HTTP_NET_DynamicWriteString(vDcpt, (const char *)LIGHT_VERSION_STR, false);
     return TCPIP_HTTP_DYN_PRINT_RES_DONE;
 }
 

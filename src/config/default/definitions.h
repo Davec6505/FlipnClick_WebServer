@@ -49,11 +49,13 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include "driver/memory/drv_memory.h"
+#include "driver/sdspi/drv_sdspi.h"
 #include "peripheral/uart/plib_uart5.h"
 #include "peripheral/nvm/plib_nvm.h"
 #include "system/time/sys_time.h"
 #include "peripheral/coretimer/plib_coretimer.h"
 #include "driver/memory/drv_memory_nvm.h"
+#include "peripheral/spi/spi_master/plib_spi2_master.h"
 #include "peripheral/spi/spi_master/plib_spi1_master.h"
 #include "driver/spi/drv_spi.h"
 #include "library/tcpip/tcpip.h"
@@ -79,6 +81,10 @@
 #include "net_pres/pres/net_pres_socketapi.h"
 #include "system/fs/sys_fs.h"
 #include "system/fs/sys_fs_media_manager.h"
+#include "system/fs/sys_fs_fat_interface.h"
+#include "system/fs/fat_fs/file_system/ff.h"
+#include "system/fs/fat_fs/file_system/ffconf.h"
+#include "system/fs/fat_fs/hardware_access/diskio.h"
 #include "system/fs/mpfs/mpfs.h"
 #include "system/console/sys_console.h"
 #include "system/console/src/sys_console_uart_definitions.h"
@@ -213,6 +219,9 @@ Remarks:
 
 typedef struct
 {
+    /* SDSPI0 Driver Object */
+    SYS_MODULE_OBJ drvSDSPI0;
+
     SYS_MODULE_OBJ  sysTime;
     SYS_MODULE_OBJ  drvMemory0;
     SYS_MODULE_OBJ  sysConsole0;

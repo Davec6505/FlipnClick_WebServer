@@ -208,15 +208,15 @@ void APP_Tasks ( void )
             if(SYS_TMR_TickCountGet() - startTick >= SYS_TMR_TickCounterFrequencyGet()/2ul)
             {
                 startTick = SYS_TMR_TickCountGet();
-                LEDstate ^= APP_LED_STATE_ON;
-                if(LEDstate == 1)
+               // LEDstate ^= APP_LED_STATE_ON;
+               /* if(LEDstate == 1)
                 {
                     APP_LED_1StateSet();
                 }
                 else if(LEDstate == 0)
                 {
                     APP_LED_1StateClear();
-                }
+                }*/
             }
 
             // if the IP address of an interface has changed

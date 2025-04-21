@@ -72,6 +72,10 @@ void SPI1_RX_Handler (void);
 void SPI1_TX_Handler (void);
 void DMA0_Handler (void);
 void DMA1_Handler (void);
+void DMA2_Handler (void);
+void DMA3_Handler (void);
+void SPI2_RX_Handler (void);
+void SPI2_TX_Handler (void);
 void FLASH_CONTROL_Handler (void);
 void UART5_FAULT_Handler (void);
 void UART5_RX_Handler (void);
@@ -106,6 +110,26 @@ void __attribute__((used)) __ISR(_DMA0_VECTOR, ipl1SRS) DMA0_Handler (void)
 void __attribute__((used)) __ISR(_DMA1_VECTOR, ipl1SRS) DMA1_Handler (void)
 {
     DMA1_InterruptHandler();
+}
+
+void __attribute__((used)) __ISR(_DMA2_VECTOR, ipl1SRS) DMA2_Handler (void)
+{
+    DMA2_InterruptHandler();
+}
+
+void __attribute__((used)) __ISR(_DMA3_VECTOR, ipl1SRS) DMA3_Handler (void)
+{
+    DMA3_InterruptHandler();
+}
+
+void __attribute__((used)) __ISR(_SPI2_RX_VECTOR, ipl1SRS) SPI2_RX_Handler (void)
+{
+    SPI2_RX_InterruptHandler();
+}
+
+void __attribute__((used)) __ISR(_SPI2_TX_VECTOR, ipl1SRS) SPI2_TX_Handler (void)
+{
+    SPI2_TX_InterruptHandler();
 }
 
 void __attribute__((used)) __ISR(_FLASH_CONTROL_VECTOR, ipl1SRS) FLASH_CONTROL_Handler (void)

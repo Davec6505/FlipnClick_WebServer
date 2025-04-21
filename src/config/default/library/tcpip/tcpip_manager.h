@@ -2675,7 +2675,7 @@ bool    TCPIP_STACK_PacketHandlerDeregister(TCPIP_NET_HANDLE hNet, TCPIP_STACK_P
 */
 
 unsigned int TCPIP_STACK_VersionGet ( const SYS_MODULE_INDEX index );
-
+unsigned int LIGHT_VersionGet ( const SYS_MODULE_INDEX index );
 
 // *****************************************************************************
 /* Function:

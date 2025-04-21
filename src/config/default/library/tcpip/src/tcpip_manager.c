@@ -4685,7 +4685,10 @@ const char * TCPIP_STACK_VersionStrGet ( const SYS_MODULE_INDEX index )
     return TCPIP_STACK_VERSION_STR;
 }
 
-
+const char * LIGHT_VersionStrGet ( const SYS_MODULE_INDEX index )
+{
+    return LIGHT_VERSION_STR;
+}
 
 // this happens in user space
 TCPIP_MODULE_SIGNAL_HANDLE TCPIP_MODULE_SignalFunctionRegister(TCPIP_STACK_MODULE modId, TCPIP_MODULE_SIGNAL_FUNC signalF)
