@@ -98,6 +98,13 @@
 #define APP_SYS_FS_TYPE             MPFS2
 #define APP_SYS_FS_TYPE_STRING      "MPFS2"
 
+
+#define APP_SYS_FS_SD_VOL                   "/dev/sda1"
+#define APP_SYS_FS_SDCARD_MOUNT_POINT       "/mnt/mchpSite2"
+#define APP_SYS_FS_SDCARD_TYPE              FAT
+#define APP_SYS_FS_SDCARD_TYPE_STRING       "FATFS"
+
+
 // *****************************************************************************
 /* Application States
 
@@ -113,7 +120,8 @@ typedef enum
 {
     /* The application mounts the disk. */
     APP_MOUNT_DISK = 0,
-
+            
+    APP_MOUNT_SDISK,
     /* In this state, the application waits for the initialization of the TCP/IP stack
        to complete. */
     APP_TCPIP_WAIT_INIT,

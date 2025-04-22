@@ -79,6 +79,7 @@ Microchip or any third party.
 #define TCPIP_STACK_VERSION_STR           "8.10 - H3"
 #define LIGHT_VERSION_STR                 "LED_O - 1.01"
 
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: List of the supported TCP/IP Stack Addresses
@@ -740,6 +741,7 @@ typedef struct TCPIP_STACK_INIT
 #include "tcpip/arp.h"
 #include "tcpip/tcp.h"
 #include "tcpip/udp.h"
+#include "tcpip/ftp.h"
 #include "tcpip/icmp.h"
 #include "tcpip/telnet.h"
 #include "tcpip/http_net.h"

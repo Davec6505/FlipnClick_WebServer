@@ -136,14 +136,14 @@ extern "C" {
 
 #define SYS_FS_MEDIA_TYPE_IDX0 				SYS_FS_MEDIA_TYPE_NVM
 #define SYS_FS_TYPE_IDX0 					MPFS2
-
+					
 #define SYS_FS_MEDIA_IDX0_MOUNT_NAME_VOLUME_IDX0 			"/mnt/myDrive1"
 #define SYS_FS_MEDIA_IDX0_DEVICE_NAME_VOLUME_IDX0			"/dev/nvma1"
 								
 #define SYS_FS_MEDIA_TYPE_IDX1 				SYS_FS_MEDIA_TYPE_MSD
 #define SYS_FS_TYPE_IDX1 					FAT
 					
-#define SYS_FS_MEDIA_IDX1_MOUNT_NAME_VOLUME_IDX0 			"/mnt/myDrive1"
+#define SYS_FS_MEDIA_IDX1_MOUNT_NAME_VOLUME_IDX0 			"/mnt/myDrive2"
 #define SYS_FS_MEDIA_IDX1_DEVICE_NAME_VOLUME_IDX0			"/dev/sda1"
 								
 
@@ -183,7 +183,7 @@ extern "C" {
 /* Memory Driver Instance 0 Configuration */
 #define DRV_MEMORY_INDEX_0                   0
 #define DRV_MEMORY_CLIENTS_NUMBER_IDX0       1
-#define DRV_MEMORY_BUF_Q_SIZE_IDX0    6
+#define DRV_MEMORY_BUF_Q_SIZE_IDX0    1
 #define DRV_MEMORY_DEVICE_START_ADDRESS      0x9d0a0000U
 #define DRV_MEMORY_DEVICE_MEDIA_SIZE         1024UL
 #define DRV_MEMORY_DEVICE_MEDIA_SIZE_BYTES   (DRV_MEMORY_DEVICE_MEDIA_SIZE * 1024U)
@@ -450,6 +450,27 @@ extern "C" {
 
 
 
+
+
+
+/*** FTP Configuration ***/
+#define TCPIP_STACK_USE_FTP_SERVER
+#define TCPIP_FTP_USER_NAME_LEN                 10
+#define TCPIP_FTP_MAX_CONNECTIONS               1
+#define TCPIP_FTP_DATA_SKT_TX_BUFF_SIZE         1024
+#define TCPIP_FTP_DATA_SKT_RX_BUFF_SIZE         1024
+#define TCPIP_FTPS_TASK_TICK_RATE               33
+#define TCPIP_FTP_TIMEOUT                       180
+
+#define TCPIP_FTPS_COMMAND_LISTEN_PORT          21
+#define TCPIP_FTPS_DATA_LISTEN_PORT             20
+#define TCPIP_FTP_MOUNT_POINT                   "/mnt/mchpSite2/"
+
+/***Comment this line out to disable MPFS***/
+#define TCPIP_FTP_PUT_ENABLED   
+
+#define TCPIP_FTPS_OBSOLETE_AUTHENTICATION false
+#define TCPIP_FTPS_AUTHENTICATION_CONN_INFO true
 
 
 /* MPLAB Harmony Net Presentation Layer Definitions*/

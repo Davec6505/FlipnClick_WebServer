@@ -59,11 +59,11 @@
               <itemPath>../src/config/default/driver/memory/drv_memory_nvm.h</itemPath>
             </logicalFolder>
             <logicalFolder name="sdspi" displayName="sdspi" projectFiles="true">
-              <itemPath>../src/config/default/driver/sdspi/src/drv_sdspi_file_system.h</itemPath>
               <itemPath>../src/config/default/driver/sdspi/src/drv_sdspi_plib_interface.h</itemPath>
               <itemPath>../src/config/default/driver/sdspi/drv_sdspi.h</itemPath>
               <itemPath>../src/config/default/driver/sdspi/drv_sdspi_definitions.h</itemPath>
               <itemPath>../src/config/default/driver/sdspi/src/drv_sdspi_local.h</itemPath>
+              <itemPath>../src/config/default/driver/sdspi/src/drv_sdspi_file_system.h</itemPath>
             </logicalFolder>
             <logicalFolder name="spi" displayName="spi" projectFiles="true">
               <itemPath>../src/config/default/driver/spi/drv_spi_definitions.h</itemPath>
@@ -407,9 +407,9 @@
               <itemPath>../src/config/default/driver/memory/src/drv_memory_nvm.c</itemPath>
             </logicalFolder>
             <logicalFolder name="sdspi" displayName="sdspi" projectFiles="true">
-              <itemPath>../src/config/default/driver/sdspi/src/drv_sdspi_file_system.c</itemPath>
               <itemPath>../src/config/default/driver/sdspi/src/drv_sdspi_plib_interface.c</itemPath>
               <itemPath>../src/config/default/driver/sdspi/src/drv_sdspi.c</itemPath>
+              <itemPath>../src/config/default/driver/sdspi/src/drv_sdspi_file_system.c</itemPath>
             </logicalFolder>
             <logicalFolder name="spi" displayName="spi" projectFiles="true">
               <itemPath>../src/config/default/driver/spi/src/drv_spi.c</itemPath>
@@ -440,6 +440,7 @@
                 <itemPath>../src/config/default/library/tcpip/src/hash_fnv.c</itemPath>
                 <itemPath>../src/config/default/library/tcpip/src/telnet.c</itemPath>
                 <itemPath>../src/config/default/library/tcpip/src/icmp.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/ftp.c</itemPath>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
@@ -592,9 +593,9 @@
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
-      <itemPath>../src/mpfs_net_img.c</itemPath>
       <itemPath>../src/custom_http_net_app.c</itemPath>
       <itemPath>../src/http_net_print.c</itemPath>
+      <itemPath>../src/mpfs_net_img.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>

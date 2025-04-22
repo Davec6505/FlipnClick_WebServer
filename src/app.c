@@ -73,7 +73,8 @@
 */
 
 APP_DATA appData;
-
+uint8_t mountSdmmcFlag  = false;
+uint8_t mountNVMFlag    = false;
 APP_LED_STATE LEDstate = APP_LED_STATE_OFF;
 // *****************************************************************************
 // *****************************************************************************
@@ -147,7 +148,13 @@ void APP_Tasks ( void )
 
             CORETIMER_DelayMs(100);
             break;
-
+       case APP_MOUNT_SDISK:
+            if(SYS_FS_Mount(APP_SYS_FS_SD_VOL, APP_SYS_FS_SDCARD_MOUNT_POINT, APP_SYS_FS_SDCARD_TYPE, 0, NULL) == 0)
+            {
+              SYS_CONSOLE_PRINT("SYS_Initialize: The %s File System is mounted\r\n", APP_SYS_FS_TYPE_STRING);              
+              appData.state = APP_TCPIP_WAIT_INIT;
+            }
+            break;
         case APP_TCPIP_WAIT_INIT:
             tcpipStat = TCPIP_STACK_Status(sysObj.tcpip);
             if(tcpipStat < 0)
