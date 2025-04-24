@@ -58,6 +58,66 @@
 // *****************************************************************************
 
 // *****************************************************************************
+/*
+ * Array to communicate the sd card mount error over uart.
+ */
+char const *SYS_FS_ERROR_S[24] = 
+{
+    /* Success */
+    "SYS_FS_ERROR_OK",
+    /* (1) A hard error occurred in the low level disk I/O layer */
+    "SYS_FS_ERROR_DISK_ERR",
+    /* (2) Assertion failed */
+    "SYS_FS_ERROR_INT_ERR",
+    /* (3) The physical drive cannot work */
+    "SYS_FS_ERROR_NOT_READY",
+    /* (4) Could not find the file */
+    "SYS_FS_ERROR_NO_FILE",
+    /* (5) Could not find the path */
+    "SYS_FS_ERROR_NO_PATH",
+    /* (6) The path name format is invalid */
+    "SYS_FS_ERROR_INVALID_NAME",
+    /* (7) Access denied due to prohibited access or directory full */
+    "SYS_FS_ERROR_DENIED",
+    /* (8) Access denied due to prohibited access */
+    "SYS_FS_ERROR_EXIST",
+    /* (9) The file/directory object is invalid */
+    "SYS_FS_ERROR_INVALID_OBJECT",
+    /* (10) The physical drive is write protected */
+    "SYS_FS_ERROR_WRITE_PROTECTED",
+    /* (11) The logical drive number is invalid */
+    "SYS_FS_ERROR_INVALID_DRIVE",
+    /* (12) The volume has no work area */
+    "SYS_FS_ERROR_NOT_ENABLED",
+    /* (13) There is no valid volume */
+    "SYS_FS_ERROR_NO_FILESYSTEM",
+    /* (14) The Format() aborted due to any parameter error */
+    "SYS_FS_ERROR_FORMAT_ABORTED",
+    /* (15) Could not get a grant to access the volume within defined period */
+    "SYS_FS_ERROR_TIMEOUT",
+    /* (16) The operation is rejected according to the file sharing policy */
+    "SYS_FS_ERROR_LOCKED",
+    /* (17) LFN working buffer could not be allocated */
+    "SYS_FS_ERROR_NOT_ENOUGH_CORE",
+    /* (18) Number of open files */
+    "SYS_FS_ERROR_TOO_MANY_OPEN_FILES",
+    /* (19) Given parameter is invalid */
+    "SYS_FS_ERROR_INVALID_PARAMETER",
+    /* (20) Too many mounts requested. Not enough free volume available */
+    "SYS_FS_ERROR_NOT_ENOUGH_FREE_VOLUME",
+    /* (21) Requested native file system is not supported */
+    "SYS_FS_ERROR_FS_NOT_SUPPORTED",
+    /* (22) Requested native file system does not match the format of volume */
+    "SYS_FS_ERROR_FS_NOT_MATCH_WITH_VOLUME",
+    /* (23) Function not supported in native file system layer */ 
+    "SYS_FS_ERROR_NOT_SUPPORTED_IN_NATIVE_FS"
+};
+
+
+ const char* _fp_ = "protect/CONFIG.txt";
+ const char* __fp__ = "protect/NETWORK.dat"; 
+ const char* bmpfiles_ = "protect/BMP_FILES.txt"; 
+// *****************************************************************************
 /* Application Data
 
   Summary:
@@ -94,8 +154,16 @@ APP_LED_STATE LEDstate = APP_LED_STATE_OFF;
 
 /* TODO:  Add any necessary local functions.
 */
-
-
+/*static void str_ip(char* str_,const char*str2){
+    
+    while(*str2 != '\r'){
+        *(str_++) = *(str2++);
+    }
+    *str_ = '\0';
+     SYS_CONSOLE_PRINT("%s \r\n",str_);
+    
+}
+*/
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Initialization and State Machine Functions
@@ -112,10 +180,10 @@ APP_LED_STATE LEDstate = APP_LED_STATE_OFF;
 void APP_Initialize ( void )
 {
     /* Place the App state machine in its initial state. */
-    appData.state = APP_TCPIP_WAIT_INIT;
+    appData.state = APP_MOUNT_DISK;
     
     /* Place the application state machine in its initial state. */
-    appData.state = APP_MOUNT_DISK;
+    //appData.state = APP_MOUNT_DISK;
 }
 
 /******************************************************************************
@@ -135,25 +203,106 @@ void APP_Tasks ( void )
     int                 i;
     const char          *netName, *netBiosName;
     static uint32_t     startTick = 0;
-
+    static uint8_t      mount_error_count = 0;
+    SYS_FS_ERROR        err_;
+    
+   // static int8_t       init_ip_display;
+   // TCPIP_MAC_ADDR newMACAddr;
+    IPV4_ADDR ip_address,subnet_mask,gw_address;
+    SYS_FS_HANDLE _handle;
+    char str_val[50]={0};
+    char buffer[7][50];
+  //  char bmp_file_buffer[20][50];
+    
+    if((mountNVMFlag == false ) || (mountSdmmcFlag == false))
+    {
+        if(mountSdmmcFlag == false)
+        {
+            if(SYS_FS_Mount(APP_SYS_FS_SD_VOL, APP_SYS_FS_SDCARD_MOUNT_POINT, APP_SYS_FS_SDCARD_TYPE, 0, NULL) == 0)
+            {
+                SYS_CONSOLE_PRINT("SYS_Initialize: The %s File System is mounted\r\n", APP_SYS_FS_SDCARD_TYPE_STRING);
+                mountSdmmcFlag = true;
+                appData.state = APP_READ_IP;
+            }
+            else{
+                mount_error_count++;
+                if(mount_error_count > 999)
+                {
+                    err_ = SYS_FS_Error();
+                    SYS_CONSOLE_PRINT("%s\r\n",SYS_FS_ERROR_S[err_]);
+                    mount_error_count = 0;
+                }
+            }
+        }
+        if(mountNVMFlag == false)
+        {
+            if(SYS_FS_Mount(APP_SYS_FS_NVM_VOL, APP_SYS_FS_NVM_MOUNT_POINT, APP_SYS_FS_NVM_TYPE, 0, NULL) == 0)
+            {
+                SYS_CONSOLE_PRINT("SYS_Initialize: The %s File System is mounted\r\n", APP_SYS_FS_TYPE_STRING);
+                mountNVMFlag = true;
+            }
+        }
+    }
 
     switch(appData.state)
     {
-        case APP_MOUNT_DISK:
-            if(SYS_FS_Mount(APP_SYS_FS_NVM_VOL, APP_SYS_FS_MOUNT_POINT, APP_SYS_FS_TYPE, 0, NULL) == 0)
+       case APP_MOUNT_DISK:
+          /*  if(SYS_FS_Mount(APP_SYS_FS_NVM_VOL, APP_SYS_FS_MOUNT_POINT, APP_SYS_FS_TYPE, 0, NULL) == 0)
             {
                 SYS_CONSOLE_PRINT("SYS_Initialize: The %s File System is mounted\r\n", APP_SYS_FS_TYPE_STRING);
-                appData.state = APP_TCPIP_WAIT_INIT;
+                appData.state = APP_TCPIP_WAIT_INIT;//APP_MOUNT_SDISK;
             }
-
+*/
             CORETIMER_DelayMs(100);
             break;
-       case APP_MOUNT_SDISK:
+/*       case APP_MOUNT_SDISK:
             if(SYS_FS_Mount(APP_SYS_FS_SD_VOL, APP_SYS_FS_SDCARD_MOUNT_POINT, APP_SYS_FS_SDCARD_TYPE, 0, NULL) == 0)
             {
-              SYS_CONSOLE_PRINT("SYS_Initialize: The %s File System is mounted\r\n", APP_SYS_FS_TYPE_STRING);              
+              SYS_CONSOLE_PRINT("SYS_Initialize: The %s File System is mounted\r\n",APP_SYS_FS_SDCARD_TYPE_STRING);              
               appData.state = APP_TCPIP_WAIT_INIT;
             }
+            CORETIMER_DelayMs(200);
+            break;*/
+        case APP_READ_IP:
+   
+            _handle = SYS_FS_FileOpen(_fp_,SYS_FS_FILE_OPEN_READ);
+            if(_handle != SYS_FS_HANDLE_INVALID){
+                int ii = 0;
+                while(SYS_FS_FileStringGet(_handle,buffer[ii],50)== SYS_FS_RES_SUCCESS){
+                    SYS_CONSOLE_PRINT("%s",buffer[ii++]);
+                }
+                SYS_FS_FileClose(_handle);
+
+                memset(str_val,'\0',strlen(buffer[2]));
+                strncpy(str_val,buffer[2],strlen(buffer[2])-2);
+                bool okA = TCPIP_Helper_StringToIPAddress(str_val,&ip_address);
+                
+                memset(str_val,'\0',strlen(buffer[4]));
+                strncpy(str_val,buffer[4],strlen(buffer[4])-2);
+                bool okB = TCPIP_Helper_StringToIPAddress(str_val,&subnet_mask);
+                
+                netH = TCPIP_STACK_IndexToNet(0);
+                if(okA & okB){
+                  TCPIP_STACK_NetAddressSet (netH, &ip_address,&subnet_mask, true);
+                }
+                else{
+                    SYS_CONSOLE_MESSAGE("Failed to convert IP or SUB");
+                }
+                
+                memset(str_val,'\0',strlen(buffer[3]));
+                strncpy(str_val,buffer[3],strlen(buffer[3])-2);
+                if(TCPIP_Helper_StringToIPAddress(str_val,&gw_address)){
+                   TCPIP_STACK_NetAddressGatewaySet(netH,&gw_address);
+                }
+                else{
+                   SYS_CONSOLE_MESSAGE("Failed to convert GW");
+                }
+                      
+            }else{
+                SYS_CONSOLE_PRINT("SD handle error:= %lu \r\n",_handle);
+            }
+                           
+            appData.state = APP_TCPIP_WAIT_INIT;
             break;
         case APP_TCPIP_WAIT_INIT:
             tcpipStat = TCPIP_STACK_Status(sysObj.tcpip);

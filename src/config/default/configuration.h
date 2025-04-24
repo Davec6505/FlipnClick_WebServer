@@ -113,8 +113,7 @@ extern "C" {
 #define SYS_FS_MEDIA_NUMBER               (2U)
 #define SYS_FS_VOLUME_NUMBER              (2U)
 
-#define SYS_FS_AUTOMOUNT_ENABLE           true
-#define SYS_FS_CLIENT_NUMBER              2U
+#define SYS_FS_AUTOMOUNT_ENABLE           false
 #define SYS_FS_MAX_FILES                  (6U)
 #define SYS_FS_MAX_FILE_SYSTEM_TYPE       (2U)
 #define SYS_FS_MEDIA_MAX_BLOCK_SIZE       (512U)
@@ -134,19 +133,7 @@ extern "C" {
 
 
 
-#define SYS_FS_MEDIA_TYPE_IDX0 				SYS_FS_MEDIA_TYPE_NVM
-#define SYS_FS_TYPE_IDX0 					MPFS2
 					
-#define SYS_FS_MEDIA_IDX0_MOUNT_NAME_VOLUME_IDX0 			"/mnt/myDrive1"
-#define SYS_FS_MEDIA_IDX0_DEVICE_NAME_VOLUME_IDX0			"/dev/nvma1"
-								
-#define SYS_FS_MEDIA_TYPE_IDX1 				SYS_FS_MEDIA_TYPE_MSD
-#define SYS_FS_TYPE_IDX1 					FAT
-					
-#define SYS_FS_MEDIA_IDX1_MOUNT_NAME_VOLUME_IDX0 			"/mnt/myDrive2"
-#define SYS_FS_MEDIA_IDX1_DEVICE_NAME_VOLUME_IDX0			"/dev/sda1"
-								
-
 #define SYS_CONSOLE_DEVICE_MAX_INSTANCES   			(1U)
 #define SYS_CONSOLE_UART_MAX_INSTANCES 	   			(1U)
 #define SYS_CONSOLE_USB_CDC_MAX_INSTANCES 	   		(0U)
@@ -163,7 +150,7 @@ extern "C" {
 /* SDSPI Driver Instance 0 Configuration Options */
 #define DRV_SDSPI_INDEX_0                       0
 #define DRV_SDSPI_CLIENTS_NUMBER_IDX0           1
-#define DRV_SDSPI_QUEUE_SIZE_IDX0               4
+#define DRV_SDSPI_QUEUE_SIZE_IDX0               6
 #define DRV_SDSPI_CHIP_SELECT_PIN_IDX0          SYS_PORT_PIN_RE4
 #define DRV_SDSPI_SPEED_HZ_IDX0                 10000000
 #define DRV_SDSPI_POLLING_INTERVAL_MS_IDX0      1000
@@ -455,7 +442,7 @@ extern "C" {
 
 /*** FTP Configuration ***/
 #define TCPIP_STACK_USE_FTP_SERVER
-#define TCPIP_FTP_USER_NAME_LEN                 10
+#define TCPIP_FTP_USER_NAME_LEN                 20
 #define TCPIP_FTP_MAX_CONNECTIONS               1
 #define TCPIP_FTP_DATA_SKT_TX_BUFF_SIZE         1024
 #define TCPIP_FTP_DATA_SKT_RX_BUFF_SIZE         1024

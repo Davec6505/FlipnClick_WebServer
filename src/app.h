@@ -94,15 +94,16 @@
 // Application SYS_FS mount points
 // Adjust as needed
 #define APP_SYS_FS_NVM_VOL          "/dev/nvma1"
-#define APP_SYS_FS_MOUNT_POINT      "/mnt/mchpSite1"
-#define APP_SYS_FS_TYPE             MPFS2
+#define APP_SYS_FS_NVM_MOUNT_POINT      "/mnt/mchpSite1"
+#define APP_SYS_FS_NVM_TYPE             MPFS2
 #define APP_SYS_FS_TYPE_STRING      "MPFS2"
 
 
-#define APP_SYS_FS_SD_VOL                   "/dev/sda1"
+#define APP_SYS_FS_SD_VOL                   "/dev/mmcblka1" //"/dev/sda1" 
 #define APP_SYS_FS_SDCARD_MOUNT_POINT       "/mnt/mchpSite2"
 #define APP_SYS_FS_SDCARD_TYPE              FAT
 #define APP_SYS_FS_SDCARD_TYPE_STRING       "FATFS"
+
 
 
 // *****************************************************************************
@@ -122,6 +123,8 @@ typedef enum
     APP_MOUNT_DISK = 0,
             
     APP_MOUNT_SDISK,
+            
+    APP_READ_IP,
     /* In this state, the application waits for the initialization of the TCP/IP stack
        to complete. */
     APP_TCPIP_WAIT_INIT,

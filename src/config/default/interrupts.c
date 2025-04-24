@@ -87,47 +87,47 @@ void UART5_TX_Handler (void);
 // Section: System Interrupt Vector definitions
 // *****************************************************************************
 // *****************************************************************************
-void __attribute__((used)) __ISR(_CORE_TIMER_VECTOR, ipl1SRS) CORE_TIMER_Handler (void)
+void __attribute__((used)) __ISR(_CORE_TIMER_VECTOR, ipl7SRS) CORE_TIMER_Handler (void)
 {
     CORE_TIMER_InterruptHandler();
 }
 
-void __attribute__((used)) __ISR(_SPI1_RX_VECTOR, ipl1SRS) SPI1_RX_Handler (void)
+void __attribute__((used)) __ISR(_SPI1_RX_VECTOR, ipl6SRS) SPI1_RX_Handler (void)
 {
     SPI1_RX_InterruptHandler();
 }
 
-void __attribute__((used)) __ISR(_SPI1_TX_VECTOR, ipl1SRS) SPI1_TX_Handler (void)
+void __attribute__((used)) __ISR(_SPI1_TX_VECTOR, ipl6SRS) SPI1_TX_Handler (void)
 {
     SPI1_TX_InterruptHandler();
 }
 
-void __attribute__((used)) __ISR(_DMA0_VECTOR, ipl1SRS) DMA0_Handler (void)
+void __attribute__((used)) __ISR(_DMA0_VECTOR, ipl4SRS) DMA0_Handler (void)
 {
     DMA0_InterruptHandler();
 }
 
-void __attribute__((used)) __ISR(_DMA1_VECTOR, ipl1SRS) DMA1_Handler (void)
+void __attribute__((used)) __ISR(_DMA1_VECTOR, ipl4SRS) DMA1_Handler (void)
 {
     DMA1_InterruptHandler();
 }
 
-void __attribute__((used)) __ISR(_DMA2_VECTOR, ipl1SRS) DMA2_Handler (void)
+void __attribute__((used)) __ISR(_DMA2_VECTOR, ipl5SRS) DMA2_Handler (void)
 {
     DMA2_InterruptHandler();
 }
 
-void __attribute__((used)) __ISR(_DMA3_VECTOR, ipl1SRS) DMA3_Handler (void)
+void __attribute__((used)) __ISR(_DMA3_VECTOR, ipl5SRS) DMA3_Handler (void)
 {
     DMA3_InterruptHandler();
 }
 
-void __attribute__((used)) __ISR(_SPI2_RX_VECTOR, ipl1SRS) SPI2_RX_Handler (void)
+void __attribute__((used)) __ISR(_SPI2_RX_VECTOR, ipl5SRS) SPI2_RX_Handler (void)
 {
     SPI2_RX_InterruptHandler();
 }
 
-void __attribute__((used)) __ISR(_SPI2_TX_VECTOR, ipl1SRS) SPI2_TX_Handler (void)
+void __attribute__((used)) __ISR(_SPI2_TX_VECTOR, ipl5SRS) SPI2_TX_Handler (void)
 {
     SPI2_TX_InterruptHandler();
 }
