@@ -88,6 +88,7 @@ static HTTP_APP_DYNVAR_ENTRY HTTP_APP_DynVarTbl[] =
 {"ddns_host",					TCPIP_HTTP_Print_ddns_host},
 {"btn",					TCPIP_HTTP_Print_btn},
 {"pot",					TCPIP_HTTP_Print_pot},
+{"bmps",					TCPIP_HTTP_Print_bmps},
 };
 
 // Function that processes the dynamic variables

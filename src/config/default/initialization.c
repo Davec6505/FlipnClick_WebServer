@@ -451,6 +451,8 @@ const TCPIP_FTP_MODULE_CONFIG tcpipFTPInitData =
     .dataSktTxBuffSize  = TCPIP_FTP_DATA_SKT_TX_BUFF_SIZE,
     .dataSktRxBuffSize  = TCPIP_FTP_DATA_SKT_RX_BUFF_SIZE,
     .mountPath          = TCPIP_FTP_MOUNT_POINT,
+    .userName           = TCPIP_FTP_USER_NAME,
+    .password           = TCPIP_FTP_PASSWORD,
 };
 
 
@@ -635,7 +637,7 @@ static const NET_PRES_INIT_DATA netPresInitData =
 // <editor-fold defaultstate="collapsed" desc="File System Initialization Data">
 
 
- const SYS_FS_MEDIA_MOUNT_DATA sysfsMountTable[SYS_FS_VOLUME_NUMBER] =
+const SYS_FS_MEDIA_MOUNT_DATA sysfsMountTable[SYS_FS_VOLUME_NUMBER] =
 {
     {NULL}
 };
@@ -847,7 +849,7 @@ void SYS_Initialize ( void* data )
 	UART5_Initialize();
 
     NVM_Initialize();
-  
+
     CORETIMER_Initialize();
 	SPI2_Initialize();
 

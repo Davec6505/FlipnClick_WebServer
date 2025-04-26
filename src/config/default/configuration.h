@@ -96,7 +96,7 @@ extern "C" {
 
 #define SYS_CMD_ENABLE
 #define SYS_CMD_DEVICE_MAX_INSTANCES       SYS_CONSOLE_DEVICE_MAX_INSTANCES
-#define SYS_CMD_PRINT_BUFFER_SIZE          1024U
+#define SYS_CMD_PRINT_BUFFER_SIZE          4096U
 #define SYS_CMD_BUFFER_DMA_READY
 
 
@@ -114,10 +114,10 @@ extern "C" {
 #define SYS_FS_VOLUME_NUMBER              (2U)
 
 #define SYS_FS_AUTOMOUNT_ENABLE           false
-#define SYS_FS_MAX_FILES                  (6U)
+#define SYS_FS_MAX_FILES                  (4U)
 #define SYS_FS_MAX_FILE_SYSTEM_TYPE       (2U)
 #define SYS_FS_MEDIA_MAX_BLOCK_SIZE       (512U)
-#define SYS_FS_MEDIA_MANAGER_BUFFER_SIZE  (2048U)
+#define SYS_FS_MEDIA_MANAGER_BUFFER_SIZE  (4096U)
 #define SYS_FS_USE_LFN                    (1)
 #define SYS_FS_FILE_NAME_LEN              (255U)
 #define SYS_FS_CWD_STRING_LEN             (1024)
@@ -133,7 +133,7 @@ extern "C" {
 
 
 
-					
+
 #define SYS_CONSOLE_DEVICE_MAX_INSTANCES   			(1U)
 #define SYS_CONSOLE_UART_MAX_INSTANCES 	   			(1U)
 #define SYS_CONSOLE_USB_CDC_MAX_INSTANCES 	   		(0U)
@@ -233,7 +233,7 @@ extern "C" {
 #define TCPIP_HTTP_NET_MAX_HEADER_LEN		    		15
 #define TCPIP_HTTP_NET_CACHE_LEN		        		"600"
 #define TCPIP_HTTP_NET_TIMEOUT		            		45
-#define TCPIP_HTTP_NET_MAX_CONNECTIONS		    		4
+#define TCPIP_HTTP_NET_MAX_CONNECTIONS		    		6
 #define TCPIP_HTTP_NET_DEFAULT_FILE		        		"index.htm"
 #define TCPIP_HTTP_NET_FILENAME_MAX_LEN			        25
 #define TCPIP_HTTP_NET_WEB_DIR		        		    "/mnt/mchpSite1/"
@@ -358,7 +358,7 @@ extern "C" {
 #define TCPIP_TELNET_SKT_TX_BUFF_SIZE   0
 #define TCPIP_TELNET_SKT_RX_BUFF_SIZE   0
 #define TCPIP_TELNET_LISTEN_PORT        23
-#define TCPIP_TELNET_PRINT_BUFF_SIZE    1024
+#define TCPIP_TELNET_PRINT_BUFF_SIZE    4096
 #define TCPIP_TELNET_LINE_BUFF_SIZE     80
 #define TCPIP_TELNET_USERNAME_SIZE      15
 #define TCPIP_TELNET_CONFIG_FLAGS       \
@@ -385,7 +385,7 @@ extern "C" {
 
 /*** TCPIP Heap Configuration ***/
 #define TCPIP_STACK_USE_INTERNAL_HEAP
-#define TCPIP_STACK_DRAM_SIZE                       40000
+#define TCPIP_STACK_DRAM_SIZE                       67960
 #define TCPIP_STACK_DRAM_RUN_LIMIT                  2048
 
 #define TCPIP_STACK_MALLOC_FUNC                     malloc
@@ -456,8 +456,10 @@ extern "C" {
 /***Comment this line out to disable MPFS***/
 #define TCPIP_FTP_PUT_ENABLED   
 
-#define TCPIP_FTPS_OBSOLETE_AUTHENTICATION false
-#define TCPIP_FTPS_AUTHENTICATION_CONN_INFO true
+#define TCPIP_FTPS_OBSOLETE_AUTHENTICATION true
+#define TCPIP_FTP_USER_NAME                     "admin"
+#define TCPIP_FTP_PASSWORD                      "microchip"
+#define TCPIP_FTP_PASSWD_LEN                    11
 
 
 /* MPLAB Harmony Net Presentation Layer Definitions*/

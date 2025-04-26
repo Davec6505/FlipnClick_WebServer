@@ -3,26 +3,45 @@
 
 <h1>Uploading Files</h1>
 
-<p>The HTTP server can accept file uploads via POST.  This can be used for
-many applications such as allowing users to upload configuration settings files.
-Each application must implement its own file processor.  This example
-calculates the MD5 hash of a file.</p>
+<p>This can be used to upload bitmaps to the microSD card, the bitmap
+will be appended to end of the list and its index will be the size of the 
+list - 1.</p>
 
 <form action="upload.htm" method="post" enctype="multipart/form-data">
 <div class="examplebox">
 ~uploadedmd5~
 <p style="margin-bottom: 2px"><b>File: </b>&nbsp;
 <input type="file" name="md5file" size="30" /> &nbsp;
-<input type="submit" value="Get MD5" />
+<input type="submit" value="SUBMIT"/>
 </p>
+<p>LIST SIZE: <span id="pot1" style="font-weight:normal">?</span></p>
 </div>
 </form>
 
-<p>This is an advanced feature.  For more information, please refer to the
-implementation in <code>custom_http_net_app.c</code> for comments and explaination.</p>
-
 </div>
+<script type="text/javascript">
+// Parses the xmlResponse from status.xml and updates the status box
+function updateStatus(xmlData) {
+	var mainstat = document.getElementById('display').style.display;
+	var loadstat = document.getElementById('loading').style.display;
 
+	// Check if a timeout occurred
+	if(!xmlData)
+	{
+		mainstat = 'none';
+		loadstat = 'inline';
+		return;
+	}
+
+	// Make sure we're displaying the status display
+	mainstat = 'inline';
+	loadstat = 'none';
+
+	// Update the POT value
+	document.getElementById('pot1').innerHTML = getXMLValue(xmlData, 'pot1');
+}
+setTimeout("newAJAXCommand('status.xml', updateStatus, true)",500);
+</script>
 <script type="text/javascript">
 <!--
 document.getElementById('hello').innerHTML = "~hellomsg~";
