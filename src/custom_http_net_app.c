@@ -36,7 +36,6 @@ Microchip or any third party.
 #include "http_net_print.h"
 #if defined(TCPIP_STACK_USE_HTTP_NET_SERVER)
 
-//#include "crypto/crypto.h"
 #include "net_pres/pres/net_pres_socketapi.h"
 #include "system/sys_random_h2_adapter.h"
 #include "system/sys_time_h2_adapter.h"
@@ -102,10 +101,6 @@ Microchip or any third party.
 // Use the web page in the Demo App (~2.5kb ROM, ~0b RAM)
 #define HTTP_APP_USE_RECONFIG
 
-#if !defined( NO_MD5 )        // no MD5 if crypto_config.h says NO_MD5   
-// Use the MD5 Demo web page (~5kb ROM, ~160b RAM)
-#define HTTP_APP_USE_MD5
-#endif
 
 // Use the e-mail demo web page
 #if defined(TCPIP_STACK_USE_SMTPC)
@@ -121,11 +116,12 @@ Microchip or any third party.
 Section:
 Function Prototypes and Memory Globalizers
  ****************************************************************************/
+
 #if defined(TCPIP_HTTP_NET_USE_POST)
     #if defined(SYS_OUT_ENABLE)
         static TCPIP_HTTP_NET_IO_RESULT HTTPPostLCD(TCPIP_HTTP_NET_CONN_HANDLE connHandle);
     #endif
-    #if defined(HTTP_APP_USE_MD5)
+    #if !defined(HTTP_APP_USE_MD5)
         static TCPIP_HTTP_NET_IO_RESULT HTTPPostMD5(TCPIP_HTTP_NET_CONN_HANDLE connHandle);
     #endif
     #if defined(HTTP_APP_USE_RECONFIG)
@@ -350,7 +346,7 @@ TCPIP_HTTP_NET_IO_RESULT TCPIP_HTTP_NET_ConnectionPostExecute(TCPIP_HTTP_NET_CON
         return HTTPPostLCD(connHandle);
 #endif
 
-#if defined(HTTP_APP_USE_MD5)
+#if !defined(HTTP_APP_USE_MD5)
     if(!memcmp(filename, "upload.htm", 10))
         return HTTPPostMD5(connHandle);
 #endif
@@ -506,13 +502,15 @@ static TCPIP_HTTP_NET_IO_RESULT HTTPPostLCD(TCPIP_HTTP_NET_CONN_HANDLE connHandl
     TCPIP_HTTP_NET_IO_RES_WAITING - the function is pausing to continue later
     TCPIP_HTTP_NET_IO_RES_NEED_DATA - data needed by this function has not yet arrived
  ****************************************************************************/
-#if defined(HTTP_APP_USE_MD5)
+#if !defined(HTTP_APP_USE_MD5)
 static TCPIP_HTTP_NET_IO_RESULT HTTPPostMD5(TCPIP_HTTP_NET_CONN_HANDLE connHandle)
 {
-//    static CRYPT_MD5_CTX md5;
+   // static CRYPT_MD5_CTX md5;
     uint8_t *httpDataBuff;
-    uint32_t lenA, lenB;
+    uint32_t lenA, lenB, lenC = 0;
+    SYS_FS_HANDLE _handle;
 
+    
     #define SM_MD5_READ_SEPARATOR   (0u)
     #define SM_MD5_SKIP_TO_DATA     (1u)
     #define SM_MD5_READ_DATA        (2u)
@@ -523,7 +521,7 @@ static TCPIP_HTTP_NET_IO_RESULT HTTPPostMD5(TCPIP_HTTP_NET_CONN_HANDLE connHandl
         // Just started, so try to find the separator string
         case SM_MD5_READ_SEPARATOR:
             // Reset the MD5 calculation
-//            CRYPT_MD5_Initialize(&md5);
+ //           CRYPT_MD5_Initialize(&md5);
 
             // See if a CRLF is in the buffer
             lenA = TCPIP_HTTP_NET_ConnectionStringFind(connHandle, "\r\n", 0, 0);
@@ -575,20 +573,30 @@ static TCPIP_HTTP_NET_IO_RESULT HTTPPostMD5(TCPIP_HTTP_NET_CONN_HANDLE connHandl
             lenB = TCPIP_HTTP_NET_ConnectionByteCountGet(connHandle);
             if(lenA > lenB)
                 lenA = lenB;
+            
+            _handle = SYS_FS_FileOpen("/mnt/mchpSite2/test.txt", (SYS_FS_FILE_OPEN_WRITE));
 
+            if(_handle != SYS_FS_HANDLE_INVALID)
+            {
+            
+            }
+                 
             while(lenA > 0u)
             {// Add up to 64 bytes at a time to the sum
                 lenB = TCPIP_HTTP_NET_ConnectionRead(connHandle, httpDataBuff, (lenA < 64u)?lenA:64);
                 TCPIP_HTTP_NET_ConnectionByteCountDec(connHandle, lenB);
                 lenA -= lenB;
-//                CRYPT_MD5_DataAdd(&md5,httpDataBuff, lenB);
+               
+                lenC += SYS_FS_FileWrite(_handle, (char*)httpDataBuff, lenB);
+ //               CRYPT_MD5_DataAdd(&md5,httpDataBuff, lenB);
             }
-
+             SYS_FS_FileClose(_handle);
+            SYS_CONSOLE_PRINT("FILE data %ld\r\n",lenC);
             // If we've read all the data
             if(TCPIP_HTTP_NET_ConnectionByteCountGet(connHandle) == 0u)
             {// Calculate and copy result data buffer for printout
                 TCPIP_HTTP_NET_ConnectionPostSmSet(connHandle, SM_MD5_POST_COMPLETE);
-//                CRYPT_MD5_Finalize(&md5, httpDataBuff);
+  //              CRYPT_MD5_Finalize(&md5, httpDataBuff);
                 return TCPIP_HTTP_NET_IO_RES_DONE;
             }
 
@@ -1083,7 +1091,7 @@ static TCPIP_HTTP_NET_IO_RESULT HTTPPostEmail(TCPIP_HTTP_NET_CONN_HANDLE connHan
             mySMTPMessage.username = postEmail.username;
             mySMTPMessage.password = postEmail.password;
             mySMTPMessage.to = postEmail.mailTo;
-            mySMTPMessage.from = "\"SMTP Service\" <mchpboard@picsaregood.com>";
+            mySMTPMessage.from = "mchpboard@picsaregood.com";
             mySMTPMessage.subject = "Microchip TCP/IP Stack Status Update";
 
             // set the buffer attachment
@@ -1512,6 +1520,23 @@ TCPIP_HTTP_DYN_PRINT_RES TCPIP_HTTP_Print_ledSelected(TCPIP_HTTP_NET_CONN_HANDLE
 }
 
 TCPIP_HTTP_DYN_PRINT_RES TCPIP_HTTP_Print_pot(TCPIP_HTTP_NET_CONN_HANDLE connHandle, const TCPIP_HTTP_DYN_VAR_DCPT *vDcpt)
+{
+    uint16_t RandVal;
+    size_t nChars;
+
+    HTTP_APP_DYNVAR_BUFFER *pDynBuffer = HTTP_APP_GetDynamicBuffer();
+    if(pDynBuffer == 0)
+    {   // failed to get a buffer; retry
+        return TCPIP_HTTP_DYN_PRINT_RES_AGAIN;
+    }
+
+    RandVal = (uint16_t)SYS_RANDOM_PseudoGet();
+    nChars = sprintf(pDynBuffer->data, "%d", RandVal);
+    TCPIP_HTTP_NET_DynamicWrite(vDcpt, pDynBuffer->data, nChars, true);
+    return TCPIP_HTTP_DYN_PRINT_RES_DONE;
+}
+
+TCPIP_HTTP_DYN_PRINT_RES TCPIP_HTTP_Print_bmps(TCPIP_HTTP_NET_CONN_HANDLE connHandle, const TCPIP_HTTP_DYN_VAR_DCPT *vDcpt)
 {
     uint16_t RandVal;
     size_t nChars;

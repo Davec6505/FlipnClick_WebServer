@@ -56,11 +56,15 @@ void EVIC_Initialize( void )
     INTCONSET = _INTCON_MVEC_MASK;
 
     /* Set up priority and subpriority of enabled interrupts */
-    IPC0SET = 0x4U | 0x0U;  /* CORE_TIMER:  Priority 1 / Subpriority 0 */
-    IPC27SET = 0x40000U | 0x0U;  /* SPI1_RX:  Priority 1 / Subpriority 0 */
-    IPC27SET = 0x4000000U | 0x0U;  /* SPI1_TX:  Priority 1 / Subpriority 0 */
-    IPC33SET = 0x40000U | 0x0U;  /* DMA0:  Priority 1 / Subpriority 0 */
-    IPC33SET = 0x4000000U | 0x0U;  /* DMA1:  Priority 1 / Subpriority 0 */
+    IPC0SET = 0x1cU | 0x0U;  /* CORE_TIMER:  Priority 7 / Subpriority 0 */
+    IPC27SET = 0x180000U | 0x0U;  /* SPI1_RX:  Priority 6 / Subpriority 0 */
+    IPC27SET = 0x18000000U | 0x1000000U;  /* SPI1_TX:  Priority 6 / Subpriority 1 */
+    IPC33SET = 0x100000U | 0x0U;  /* DMA0:  Priority 4 / Subpriority 0 */
+    IPC33SET = 0x10000000U | 0x1000000U;  /* DMA1:  Priority 4 / Subpriority 1 */
+    IPC34SET = 0x14U | 0x0U;  /* DMA2:  Priority 5 / Subpriority 0 */
+    IPC34SET = 0x1400U | 0x100U;  /* DMA3:  Priority 5 / Subpriority 1 */
+    IPC35SET = 0x14000000U | 0x0U;  /* SPI2_RX:  Priority 5 / Subpriority 0 */
+    IPC36SET = 0x14U | 0x1U;  /* SPI2_TX:  Priority 5 / Subpriority 1 */
     IPC41SET = 0x4000000U | 0x0U;  /* FLASH_CONTROL:  Priority 1 / Subpriority 0 */
     IPC44SET = 0x4000000U | 0x0U;  /* UART5_FAULT:  Priority 1 / Subpriority 0 */
     IPC45SET = 0x4U | 0x0U;  /* UART5_RX:  Priority 1 / Subpriority 0 */

@@ -96,7 +96,7 @@ extern "C" {
 
 #define SYS_CMD_ENABLE
 #define SYS_CMD_DEVICE_MAX_INSTANCES       SYS_CONSOLE_DEVICE_MAX_INSTANCES
-#define SYS_CMD_PRINT_BUFFER_SIZE          1024U
+#define SYS_CMD_PRINT_BUFFER_SIZE          4096U
 #define SYS_CMD_BUFFER_DMA_READY
 
 
@@ -110,19 +110,24 @@ extern "C" {
 
 /* File System Service Configuration */
 
-#define SYS_FS_MEDIA_NUMBER               (1U)
-#define SYS_FS_VOLUME_NUMBER              (1U)
+#define SYS_FS_MEDIA_NUMBER               (2U)
+#define SYS_FS_VOLUME_NUMBER              (2U)
 
 #define SYS_FS_AUTOMOUNT_ENABLE           false
-#define SYS_FS_MAX_FILES                  (6U)
-#define SYS_FS_MAX_FILE_SYSTEM_TYPE       (1U)
+#define SYS_FS_MAX_FILES                  (4U)
+#define SYS_FS_MAX_FILE_SYSTEM_TYPE       (2U)
 #define SYS_FS_MEDIA_MAX_BLOCK_SIZE       (512U)
-#define SYS_FS_MEDIA_MANAGER_BUFFER_SIZE  (2048U)
+#define SYS_FS_MEDIA_MANAGER_BUFFER_SIZE  (4096U)
 #define SYS_FS_USE_LFN                    (1)
 #define SYS_FS_FILE_NAME_LEN              (255U)
 #define SYS_FS_CWD_STRING_LEN             (1024)
 
 
+#define SYS_FS_FAT_VERSION                "v0.15"
+#define SYS_FS_FAT_READONLY               false
+#define SYS_FS_FAT_CODE_PAGE              437
+#define SYS_FS_FAT_MAX_SS                 SYS_FS_MEDIA_MAX_BLOCK_SIZE
+#define SYS_FS_FAT_ALIGNED_BUFFER_LEN     512
 
 
 
@@ -142,13 +147,30 @@ extern "C" {
 // Section: Driver Configuration
 // *****************************************************************************
 // *****************************************************************************
+/* SDSPI Driver Instance 0 Configuration Options */
+#define DRV_SDSPI_INDEX_0                       0
+#define DRV_SDSPI_CLIENTS_NUMBER_IDX0           1
+#define DRV_SDSPI_QUEUE_SIZE_IDX0               6
+#define DRV_SDSPI_CHIP_SELECT_PIN_IDX0          SYS_PORT_PIN_RE4
+#define DRV_SDSPI_SPEED_HZ_IDX0                 10000000
+#define DRV_SDSPI_POLLING_INTERVAL_MS_IDX0      1000
+
+#define DRV_SDSPI_DMA_MODE
+#define DRV_SDSPI_XMIT_DMA_CH_IDX0              SYS_DMA_CHANNEL_2
+#define DRV_SDSPI_RCV_DMA_CH_IDX0               SYS_DMA_CHANNEL_3
+
+
+
 /* Memory Driver Global Configuration Options */
 #define DRV_MEMORY_INSTANCES_NUMBER          (1U)
+/* SDSPI Driver Common Configuration Options */
+#define DRV_SDSPI_INSTANCES_NUMBER              (1U)
+
 
 /* Memory Driver Instance 0 Configuration */
 #define DRV_MEMORY_INDEX_0                   0
 #define DRV_MEMORY_CLIENTS_NUMBER_IDX0       1
-#define DRV_MEMORY_BUF_Q_SIZE_IDX0    6
+#define DRV_MEMORY_BUF_Q_SIZE_IDX0    1
 #define DRV_MEMORY_DEVICE_START_ADDRESS      0x9d0a0000U
 #define DRV_MEMORY_DEVICE_MEDIA_SIZE         1024UL
 #define DRV_MEMORY_DEVICE_MEDIA_SIZE_BYTES   (DRV_MEMORY_DEVICE_MEDIA_SIZE * 1024U)
@@ -211,7 +233,7 @@ extern "C" {
 #define TCPIP_HTTP_NET_MAX_HEADER_LEN		    		15
 #define TCPIP_HTTP_NET_CACHE_LEN		        		"600"
 #define TCPIP_HTTP_NET_TIMEOUT		            		45
-#define TCPIP_HTTP_NET_MAX_CONNECTIONS		    		4
+#define TCPIP_HTTP_NET_MAX_CONNECTIONS		    		6
 #define TCPIP_HTTP_NET_DEFAULT_FILE		        		"index.htm"
 #define TCPIP_HTTP_NET_FILENAME_MAX_LEN			        25
 #define TCPIP_HTTP_NET_WEB_DIR		        		    "/mnt/mchpSite1/"
@@ -219,7 +241,7 @@ extern "C" {
 #define TCPIP_HTTP_NET_FILE_UPLOAD_NAME				    "mpfsupload"
 #define MPFS_UPLOAD_MOUNT_PATH							"/mnt/mchpSite1"
 #define MPFS_UPLOAD_NVM_VOL								"/dev/nvma1"
-#define MPFS_UPLOAD_DISK_NO								0
+#define MPFS_UPLOAD_DISK_NO								1
 #define TCPIP_HTTP_NET_USE_POST
 #define TCPIP_HTTP_NET_USE_COOKIES
 #define TCPIP_HTTP_NET_USE_AUTHENTICATION
@@ -239,7 +261,7 @@ extern "C" {
 #define TCPIP_HTTP_NET_FILE_PROCESS_BUFFER_RETRIES      10
 #define TCPIP_HTTP_NET_CHUNKS_NUMBER                    10
 #define TCPIP_HTTP_NET_CHUNK_RETRIES                    10
-#define TCPIP_HTTP_NET_MAX_RECURSE_LEVEL				3
+#define TCPIP_HTTP_NET_MAX_RECURSE_LEVEL				4
 #define TCPIP_HTTP_NET_DYNVAR_PROCESS           		1
 #define TCPIP_HTTP_NET_DYNVAR_DESCRIPTORS_NUMBER		10
 #define TCPIP_HTTP_NET_DYNVAR_MAX_LEN					50
@@ -336,7 +358,7 @@ extern "C" {
 #define TCPIP_TELNET_SKT_TX_BUFF_SIZE   0
 #define TCPIP_TELNET_SKT_RX_BUFF_SIZE   0
 #define TCPIP_TELNET_LISTEN_PORT        23
-#define TCPIP_TELNET_PRINT_BUFF_SIZE    1024
+#define TCPIP_TELNET_PRINT_BUFF_SIZE    4096
 #define TCPIP_TELNET_LINE_BUFF_SIZE     80
 #define TCPIP_TELNET_USERNAME_SIZE      15
 #define TCPIP_TELNET_CONFIG_FLAGS       \
@@ -363,7 +385,7 @@ extern "C" {
 
 /*** TCPIP Heap Configuration ***/
 #define TCPIP_STACK_USE_INTERNAL_HEAP
-#define TCPIP_STACK_DRAM_SIZE                       40000
+#define TCPIP_STACK_DRAM_SIZE                       67960
 #define TCPIP_STACK_DRAM_RUN_LIMIT                  2048
 
 #define TCPIP_STACK_MALLOC_FUNC                     malloc
@@ -415,6 +437,29 @@ extern "C" {
 
 
 
+
+
+
+/*** FTP Configuration ***/
+#define TCPIP_STACK_USE_FTP_SERVER
+#define TCPIP_FTP_USER_NAME_LEN                 20
+#define TCPIP_FTP_MAX_CONNECTIONS               1
+#define TCPIP_FTP_DATA_SKT_TX_BUFF_SIZE         1024
+#define TCPIP_FTP_DATA_SKT_RX_BUFF_SIZE         1024
+#define TCPIP_FTPS_TASK_TICK_RATE               33
+#define TCPIP_FTP_TIMEOUT                       180
+
+#define TCPIP_FTPS_COMMAND_LISTEN_PORT          21
+#define TCPIP_FTPS_DATA_LISTEN_PORT             20
+#define TCPIP_FTP_MOUNT_POINT                   "/mnt/mchpSite2/"
+
+/***Comment this line out to disable MPFS***/
+#define TCPIP_FTP_PUT_ENABLED   
+
+#define TCPIP_FTPS_OBSOLETE_AUTHENTICATION true
+#define TCPIP_FTP_USER_NAME                     "admin"
+#define TCPIP_FTP_PASSWORD                      "microchip"
+#define TCPIP_FTP_PASSWD_LEN                    11
 
 
 /* MPLAB Harmony Net Presentation Layer Definitions*/

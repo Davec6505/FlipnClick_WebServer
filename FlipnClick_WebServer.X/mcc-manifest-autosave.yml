@@ -2,7 +2,11 @@
 
 manifest_file_version: 1.0.0
 project: FlipnClick_WebServer
+<<<<<<< HEAD
 creation_date: 2025-04-21T17:55:49.436+01:00[Europe/London]
+=======
+creation_date: 2025-04-26T07:01:27.247+01:00[Europe/London]
+>>>>>>> patch1
 operating_system: Windows 10
 mcc_mode: IDE
 mcc_mode_version: v6.25

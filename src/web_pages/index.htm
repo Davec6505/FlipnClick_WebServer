@@ -14,52 +14,41 @@
 		<p>Buttons:<br />
 		<span id="btn2">?</span> &nbsp;
 		<span id="btn1">?</span> &nbsp;
-		<span id="btn0">?</span> &nbsp;</p>
+		<span id="btn0">?</span></p>
 		<p>Random Number: <span id="pot0" style="font-weight:normal">?</span></p>
 	</div>
 </div>
 
-<h1>Welcome!</h1>
 
 <table style="padding-left: 10px;">
-<tr><td><b>Stack Version:</b></td><td>&nbsp;</td><td>~version~</td></tr>
+<tr><td><b>LED_O Version:</b></td><td>&nbsp;</td><td>~version~</td></tr>
 <tr><td><b>Build Date:</b></td><td>&nbsp;</td><td>~builddate~</td></tr>
 </table>
 
-<p>This site demonstrates the power, flexibility, and scalability of a 32-bit embedded
-web server.  Everything you see is powered by a Microchip PIC microcontroller
-running the Harmony Microchip TCP/IP Stack.</p>
+<p>LED_O is an Alarm/Informtion display for industry, controlled from a 
+Modbus TCP client.</p>
 
-<p>On the right you'll see the current status of the demo board.  For a quick
-example, click the LEDs to toggle the lights on the board.  Press the push
-buttons (except MCLR!) and you'll see the status update immediately.
-This examples uses AJAX techniques to provide real-time feedback.</p>
+<p>LED_O can adequately deliver all the requirements as a single Lamp as well as the 
+current status in text or bitmaps.</p>
 
-<p>This site is provided as a tutorial for the various features of the HTTP
-web server, including:</p>
+<h2>Key Features</h2>
 
 <ul>
-<li><b>Dynamic Variable Substitution</b> - display real-time data</li>
-<li><b>Server Side Includes</b> - process real-time SSI commands</li>
-<li><b>Processing Forms</b> - handle input from the client</li>
-<li><b>Authentication</b> - require a user name and password</li>
-<li><b>Cookies</b> - store session state information for richer applications</li>
+<li><b>360&deg Display</b> - display real-time data</li>
+<li><b>Text,Shapes,Bitmaps and fill.</b> - Animation creates a revolving light effect.</li>
+<li><b>Modbus TCP</b> - Direct Connection to a modbus tcp client</li>
+<li><b>Bitmaps</b> - Various bitmaps are customizable.</li>
+<li><b>15bit Color</b> - Almost a full color display, losses of color are in the lighter shades.</li>
+<li><b>Analog Value display</b> - Analog values can be sent directly to the display.
 <li><b>Uploading Files</b> - parse files for configuration settings and more</li>
 </ul>
 
-<p>Several example applications are also provided for updating configuration
-parameters, sending emails, and controlling the Dynamic DNS client.  Thanks to
-built-in GZIP compression support, all these tutorials and examples fit in the
-32kB of on-board Memory.</p>
 
-<p>For more information on the Harmony TCP/IP Stack, please refer to
-the TCP/IP Stack Libraries Help paragraph in the MPLAB Harmony Help
-installed on your computer as part of the Harmony distribution.</p>
+<p>For more information on LED_O refer to the manual downloadable from the &ltwww.mes_ledo.com&gt.</p>
 
 </div>
 
 <script type="text/javascript">
-
 // Parses the xmlResponse from status.xml and updates the status box
 function updateStatus(xmlData) {
 	var mainstat = document.getElementById('display').style.display;
@@ -89,12 +78,11 @@ function updateStatus(xmlData) {
 	document.getElementById('pot0').innerHTML = getXMLValue(xmlData, 'pot0');
 }
 setTimeout("newAJAXCommand('status.xml', updateStatus, true)",500);
-
 </script>
 
 <script type="text/javascript">
-
+<!--
 document.getElementById('hello').innerHTML = "~hellomsg~";
-
+//-->
 </script>
 <!--#include file="footer.htm" -->

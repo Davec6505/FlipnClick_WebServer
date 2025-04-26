@@ -152,6 +152,16 @@
 #define ENC_RST_GetLatch()          ((LATG >> 14) & 0x1U)
 #define ENC_RST_PIN                  GPIO_PIN_RG14
 
+/*** Macros for SPI2_CS pin ***/
+#define SPI2_CS_Set()               (LATESET = (1U<<4))
+#define SPI2_CS_Clear()             (LATECLR = (1U<<4))
+#define SPI2_CS_Toggle()            (LATEINV= (1U<<4))
+#define SPI2_CS_OutputEnable()      (TRISECLR = (1U<<4))
+#define SPI2_CS_InputEnable()       (TRISESET = (1U<<4))
+#define SPI2_CS_Get()               ((PORTE >> 4) & 0x1U)
+#define SPI2_CS_GetLatch()          ((LATE >> 4) & 0x1U)
+#define SPI2_CS_PIN                  GPIO_PIN_RE4
+
 
 // *****************************************************************************
 /* GPIO Port
