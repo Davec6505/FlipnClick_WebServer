@@ -1538,15 +1538,53 @@ TCPIP_HTTP_DYN_PRINT_RES TCPIP_HTTP_Print_pot(TCPIP_HTTP_NET_CONN_HANDLE connHan
 
 TCPIP_HTTP_DYN_PRINT_RES TCPIP_HTTP_Print_bmps(TCPIP_HTTP_NET_CONN_HANDLE connHandle, const TCPIP_HTTP_DYN_VAR_DCPT *vDcpt)
 {
-    uint16_t RandVal;
+    uint16_t RandVal = 0;
     size_t nChars;
+   // SYS_FS_HANDLE dirHandle;
+   // SYS_FS_FSTAT stat;
 
+   // char longFileName[512];
+    
     HTTP_APP_DYNVAR_BUFFER *pDynBuffer = HTTP_APP_GetDynamicBuffer();
     if(pDynBuffer == 0)
     {   // failed to get a buffer; retry
         return TCPIP_HTTP_DYN_PRINT_RES_AGAIN;
     }
 
+    //read file names in directory.
+   /* dirHandle = SYS_FS_DirOpen("/mnt/mchpSite2/.");
+
+    if(dirHandle != SYS_FS_HANDLE_INVALID)
+    {
+        SYS_CONSOLE_MESSAGE("SYS_FS_HANDLE_INVALID\r\n");
+        SYS_FS_DirClose(dirHandle);
+        return TCPIP_HTTP_DYN_PRINT_RES_AGAIN;
+    }
+
+    stat.lfname = longFileName;
+    stat.lfsize = 512;
+
+    if(SYS_FS_DirRead(dirHandle, &stat) == SYS_FS_RES_FAILURE)
+    {
+        SYS_CONSOLE_MESSAGE("SYS_FS_RES_FAILURE\r\n");
+        SYS_FS_DirClose(dirHandle);
+        return TCPIP_HTTP_DYN_PRINT_RES_AGAIN;
+    }
+    else
+    {
+
+        if ((stat.lfname[0] == '\0') && (stat.fname[0] == '\0'))
+        {
+            SYS_CONSOLE_MESSAGE("Empty file name\r\n");
+        }
+        else
+        {
+            SYS_CONSOLE_PRINT("%s,\t%s\r\n",stat.lfname,stat.fname);
+            RandVal++;
+        }
+
+    }
+    SYS_FS_DirClose(dirHandle);*/
     RandVal = (uint16_t)SYS_RANDOM_PseudoGet();
     nChars = sprintf(pDynBuffer->data, "%d", RandVal);
     TCPIP_HTTP_NET_DynamicWrite(vDcpt, pDynBuffer->data, nChars, true);

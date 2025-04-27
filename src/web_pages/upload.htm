@@ -8,7 +8,8 @@ will be appended to end of the list and its index will be the size of the
 list - 1.</p>
 
 <form action="upload.htm" method="post" enctype="multipart/form-data">
-<div class="examplebox">
+<!--div id="loading" style="display:none">Error:<br />Connection to demo board was lost.</div-->
+<div class="examplebox" id="display">>
 ~uploadedmd5~
 <p style="margin-bottom: 2px"><b>File: </b>&nbsp;
 <input type="file" name="md5file" size="30" /> &nbsp;
@@ -21,26 +22,26 @@ list - 1.</p>
 </div>
 <script type="text/javascript">
 // Parses the xmlResponse from status.xml and updates the status box
-function updateStatus(xmlData) {
-	var mainstat = document.getElementById('display').style.display;
-	var loadstat = document.getElementById('loading').style.display;
+function updateList(xmlData) {
+	//var mainstat = document.getElementById('display').style.display;
+	//var loadstat = document.getElementById('loading').style.display;
 
 	// Check if a timeout occurred
 	if(!xmlData)
 	{
-		mainstat = 'none';
+		//mainstat = 'none';
 		loadstat = 'inline';
 		return;
 	}
 
 	// Make sure we're displaying the status display
-	mainstat = 'inline';
-	loadstat = 'none';
+	//mainstat = 'inline';
+	//loadstat = 'none';
 
 	// Update the POT value
 	document.getElementById('pot1').innerHTML = getXMLValue(xmlData, 'pot1');
 }
-setTimeout("newAJAXCommand('status.xml', updateStatus, true)",500);
+setTimeout("newAJAXCommand('status.xml', updateList, true)",1500);
 </script>
 <script type="text/javascript">
 <!--
