@@ -578,7 +578,7 @@ static TCPIP_HTTP_NET_IO_RESULT HTTPPostMD5(TCPIP_HTTP_NET_CONN_HANDLE connHandl
 
             if(_handle != SYS_FS_HANDLE_INVALID)
             {
-            
+               SYS_FS_FileClose(_handle);
             }
                  
             while(lenA > 0u)
@@ -1536,60 +1536,85 @@ TCPIP_HTTP_DYN_PRINT_RES TCPIP_HTTP_Print_pot(TCPIP_HTTP_NET_CONN_HANDLE connHan
     return TCPIP_HTTP_DYN_PRINT_RES_DONE;
 }
 
+char CACHE_ALIGN longFileName[512];
+static char bmps_[50][25];
+static volatile int size_bmps;
 TCPIP_HTTP_DYN_PRINT_RES TCPIP_HTTP_Print_bmps(TCPIP_HTTP_NET_CONN_HANDLE connHandle, const TCPIP_HTTP_DYN_VAR_DCPT *vDcpt)
 {
     uint16_t RandVal = 0;
-    size_t nChars;
-   // SYS_FS_HANDLE dirHandle;
-   // SYS_FS_FSTAT stat;
+    //size_t nChars;
+    SYS_FS_HANDLE dirHandle;
+    SYS_FS_FSTAT stat;
 
-   // char longFileName[512];
+    for(int i=0;i<50;i++){
+        memset(bmps_[i],0,25);
+    } 
+    //read file names in directory.
+    dirHandle = SYS_FS_DirOpen("/mnt/mchpSite2/");
+
+    if(dirHandle != SYS_FS_HANDLE_INVALID)
+    {
+        SYS_CONSOLE_MESSAGE("OPENED\r\n");
+    }
+
+    stat.lfname = longFileName;
+    stat.lfsize = 512;
     
-    HTTP_APP_DYNVAR_BUFFER *pDynBuffer = HTTP_APP_GetDynamicBuffer();
+    while(1){
+        if(SYS_FS_DirRead(dirHandle, &stat) == SYS_FS_RES_FAILURE)
+        {
+            SYS_CONSOLE_MESSAGE("SYS_FS_RES_FAILURE\r\n");
+            SYS_FS_DirClose(dirHandle);
+            return TCPIP_HTTP_DYN_PRINT_RES_AGAIN;
+        }
+        else
+        {
+
+            if ((stat.lfname[0] == '\0') && (stat.fname[0] == '\0'))
+            {
+                break;
+            }
+           else
+            {
+               // SYS_CONSOLE_PRINT("%s,\t%s\t%d\r\n",stat.lfname,stat.fname,RandVal);       
+                if(strncmp(stat.fname+(strlen(stat.fname)-4),".bmp",4)==0){
+                    strncpy(bmps_[RandVal],stat.fname,strlen(stat.fname));
+                    RandVal++;             
+                }
+            }
+
+        }
+    }
+    SYS_FS_DirClose(dirHandle);
+    
+  /*  HTTP_APP_DYNVAR_BUFFER *pDynBuffer = HTTP_APP_GetDynamicBuffer();
     if(pDynBuffer == 0)
     {   // failed to get a buffer; retry
         return TCPIP_HTTP_DYN_PRINT_RES_AGAIN;
     }
 
-    //read file names in directory.
-   /* dirHandle = SYS_FS_DirOpen("/mnt/mchpSite2/.");
-
-    if(dirHandle != SYS_FS_HANDLE_INVALID)
-    {
-        SYS_CONSOLE_MESSAGE("SYS_FS_HANDLE_INVALID\r\n");
-        SYS_FS_DirClose(dirHandle);
-        return TCPIP_HTTP_DYN_PRINT_RES_AGAIN;
-    }
-
-    stat.lfname = longFileName;
-    stat.lfsize = 512;
-
-    if(SYS_FS_DirRead(dirHandle, &stat) == SYS_FS_RES_FAILURE)
-    {
-        SYS_CONSOLE_MESSAGE("SYS_FS_RES_FAILURE\r\n");
-        SYS_FS_DirClose(dirHandle);
-        return TCPIP_HTTP_DYN_PRINT_RES_AGAIN;
-    }
-    else
-    {
-
-        if ((stat.lfname[0] == '\0') && (stat.fname[0] == '\0'))
-        {
-            SYS_CONSOLE_MESSAGE("Empty file name\r\n");
-        }
-        else
-        {
-            SYS_CONSOLE_PRINT("%s,\t%s\r\n",stat.lfname,stat.fname);
-            RandVal++;
-        }
-
-    }
-    SYS_FS_DirClose(dirHandle);*/
-    RandVal = (uint16_t)SYS_RANDOM_PseudoGet();
+ //   RandVal = (uint16_t)SYS_RANDOM_PseudoGet();
     nChars = sprintf(pDynBuffer->data, "%d", RandVal);
     TCPIP_HTTP_NET_DynamicWrite(vDcpt, pDynBuffer->data, nChars, true);
+   * */
+    TCPIP_HTTP_NET_DynamicWriteString(vDcpt,bmps_[RandVal],false);
+    size_bmps = RandVal;
+    
     return TCPIP_HTTP_DYN_PRINT_RES_DONE;
 }
+
+TCPIP_HTTP_DYN_PRINT_RES TCPIP_HTTP_Print_bmpNames(TCPIP_HTTP_NET_CONN_HANDLE connHandle, const TCPIP_HTTP_DYN_VAR_DCPT *vDcpt)
+{
+    if(vDcpt->nArgs > 0 && vDcpt->dynArgs->argType == TCPIP_HTTP_DYN_ARG_TYPE_INT32)
+    { 
+       uint16_t nBmps = vDcpt->dynArgs->argInt32;
+       TCPIP_HTTP_NET_DynamicWriteString(vDcpt, bmps_[nBmps], false);
+       SYS_CONSOLE_PRINT("Args:= %d\t%u\t%d\t%s\r\n",(int)vDcpt->nArgs,vDcpt->dynArgs->argType,vDcpt->dynArgs->argInt32,bmps_[nBmps]);
+    }
+    
+    return TCPIP_HTTP_DYN_PRINT_RES_DONE;
+}
+
 
 TCPIP_HTTP_DYN_PRINT_RES TCPIP_HTTP_Print_status_ok(TCPIP_HTTP_NET_CONN_HANDLE connHandle, const TCPIP_HTTP_DYN_VAR_DCPT *vDcpt)
 {

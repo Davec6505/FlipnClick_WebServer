@@ -1758,6 +1758,7 @@ SYS_FS_RESULT SYS_FS_DirClose
   Remarks:
     See sys_fs.h for usage information.
 ***************************************************************************/
+#include "../../../definitions.h"
 SYS_FS_RESULT SYS_FS_DirRead
 (
     SYS_FS_HANDLE handle,
@@ -1768,21 +1769,24 @@ SYS_FS_RESULT SYS_FS_DirRead
     SYS_FS_DIR_OBJ *fileObj = (SYS_FS_DIR_OBJ *)handle;
     OSAL_RESULT osalResult = OSAL_RESULT_FAIL;
 
-    if ((handle == SYS_FS_HANDLE_INVALID) || (stat == NULL))
+    if ((handle == SYS_FS_HANDLE_INVALID)  || (stat == NULL))
     {
         errorValue = SYS_FS_ERROR_INVALID_PARAMETER;
+        SYS_CONSOLE_MESSAGE("1\r\n");
         return SYS_FS_RES_FAILURE;
     }
 
     if (fileObj->inUse == false)
     {
         errorValue = SYS_FS_ERROR_INVALID_OBJECT;
+        SYS_CONSOLE_MESSAGE("2\r\n");
         return SYS_FS_RES_FAILURE;
     }
 
     if (fileObj->mountPoint->fsFunctions->readDir == NULL)
     {
         fileObj->errorValue = SYS_FS_ERROR_NOT_SUPPORTED_IN_NATIVE_FS;
+        SYS_CONSOLE_MESSAGE("3\r\n");
         return SYS_FS_RES_FAILURE;
     }
 
