@@ -1552,9 +1552,10 @@ TCPIP_HTTP_DYN_PRINT_RES TCPIP_HTTP_Print_bmps(TCPIP_HTTP_NET_CONN_HANDLE connHa
     //read file names in directory.
     dirHandle = SYS_FS_DirOpen("/mnt/mchpSite2/");
 
-    if(dirHandle != SYS_FS_HANDLE_INVALID)
+    if(dirHandle == SYS_FS_HANDLE_INVALID)
     {
-        SYS_CONSOLE_MESSAGE("OPENED\r\n");
+        SYS_CONSOLE_MESSAGE("FILE SYSTEM HAS NOT OPENED!\r\n");
+        //return TCPIP_HTTP_DYN_PRINT_RES_AGAIN;
     }
 
     stat.lfname = longFileName;
@@ -1586,20 +1587,10 @@ TCPIP_HTTP_DYN_PRINT_RES TCPIP_HTTP_Print_bmps(TCPIP_HTTP_NET_CONN_HANDLE connHa
         }
     }
     SYS_FS_DirClose(dirHandle);
-    
-  /*  HTTP_APP_DYNVAR_BUFFER *pDynBuffer = HTTP_APP_GetDynamicBuffer();
-    if(pDynBuffer == 0)
-    {   // failed to get a buffer; retry
-        return TCPIP_HTTP_DYN_PRINT_RES_AGAIN;
-    }
-
- //   RandVal = (uint16_t)SYS_RANDOM_PseudoGet();
-    nChars = sprintf(pDynBuffer->data, "%d", RandVal);
-    TCPIP_HTTP_NET_DynamicWrite(vDcpt, pDynBuffer->data, nChars, true);
-   * */
-    TCPIP_HTTP_NET_DynamicWriteString(vDcpt,bmps_[RandVal],false);
+   
     size_bmps = RandVal;
-    
+    TCPIP_HTTP_NET_DynamicWriteString(vDcpt,bmps_[RandVal],false);
+     
     return TCPIP_HTTP_DYN_PRINT_RES_DONE;
 }
 
@@ -1609,12 +1600,52 @@ TCPIP_HTTP_DYN_PRINT_RES TCPIP_HTTP_Print_bmpNames(TCPIP_HTTP_NET_CONN_HANDLE co
     { 
        uint16_t nBmps = vDcpt->dynArgs->argInt32;
        TCPIP_HTTP_NET_DynamicWriteString(vDcpt, bmps_[nBmps], false);
-       SYS_CONSOLE_PRINT("Args:= %d\t%u\t%d\t%s\r\n",(int)vDcpt->nArgs,vDcpt->dynArgs->argType,vDcpt->dynArgs->argInt32,bmps_[nBmps]);
+       
+      // SYS_CONSOLE_PRINT("Args:= %d\t%u\t%d\t%s\r\n",(int)vDcpt->nArgs,vDcpt->dynArgs->argType,vDcpt->dynArgs->argInt32,bmps_[nBmps]);
     }
     
     return TCPIP_HTTP_DYN_PRINT_RES_DONE;
 }
 
+TCPIP_HTTP_DYN_PRINT_RES TCPIP_HTTP_Print_bmpName(TCPIP_HTTP_NET_CONN_HANDLE connHandle, const TCPIP_HTTP_DYN_VAR_DCPT *vDcpt){
+   
+    const char* ptrDirection;
+    int16_t nBmp = 0;
+
+    HTTP_APP_DYNVAR_BUFFER *pDynBuffer = HTTP_APP_GetDynamicBuffer();
+   
+    if (pDynBuffer == 0)
+    { // failed to get a buffer; retry
+        return TCPIP_HTTP_DYN_PRINT_RES_AGAIN;
+    }
+    ptrDirection = (const char*)TCPIP_HTTP_NET_ArgGet(TCPIP_HTTP_NET_ConnectionDataBufferGet(connHandle), (const uint8_t *)"image");
+    
+    if (ptrDirection != NULL)
+    {     
+        SYS_CONSOLE_PRINT("bmpName.nBmp:= %s\r\n",ptrDirection);
+        //nBmp = atoi(ptrDirection);
+    }
+
+    // write it to the dynamic var
+    TCPIP_HTTP_NET_DynamicWriteString(vDcpt, bmps_[nBmp], false);
+    
+    // done
+    return TCPIP_HTTP_DYN_PRINT_RES_DONE;
+}
+
+TCPIP_HTTP_DYN_PRINT_RES TCPIP_HTTP_Print_getBmpNums(TCPIP_HTTP_NET_CONN_HANDLE connHandle, const TCPIP_HTTP_DYN_VAR_DCPT *vDcpt)
+{
+    
+    HTTP_APP_DYNVAR_BUFFER *pDynBuffer = HTTP_APP_GetDynamicBuffer();
+   
+    if (pDynBuffer == 0)
+    { // failed to get a buffer; retry
+        return TCPIP_HTTP_DYN_PRINT_RES_AGAIN;
+    }
+    int nChars = sprintf(pDynBuffer->data, "%d", size_bmps);
+    TCPIP_HTTP_NET_DynamicWrite(vDcpt, pDynBuffer->data, nChars, true);
+     return TCPIP_HTTP_DYN_PRINT_RES_DONE;
+}
 
 TCPIP_HTTP_DYN_PRINT_RES TCPIP_HTTP_Print_status_ok(TCPIP_HTTP_NET_CONN_HANDLE connHandle, const TCPIP_HTTP_DYN_VAR_DCPT *vDcpt)
 {
